@@ -1,0 +1,464 @@
+<div class="row" id="scrollTo-edit-reimbursement-form">
+	<div class="col-lg-12">
+	    <h3 id="review-submit-title"class="review-submit-sub-title mb-3">Review Reimbursement Preference and Submit Claim</h3>
+	    <h3 id="edit-review-submit-title"class="review-submit-sub-title mb-3">Edit Reimbursement Preference</h3>
+	</div>
+</div>
+<div class="row review-claim-container">
+	<div class="col-lg-5 col-md-12 col-sm-12 col-12 mb-4" id="claim-info-file-preview">
+           <div class="row">
+               <div class="col-lg-12">
+                   <h5 class="mb-0 review-submit-col-title">Claim Information</h5>
+                   <p class="review-submit-edit-icon mb-0" onclick="editClaims()">Edit
+                       <span>
+                           <i class="fa fa-pencil"></i>
+                       </span>
+                   </p>
+               </div>
+          </div>
+           <hr id="progressLine" class="mt-0">
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold mb-0">Member</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap memberVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Provider</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap providerVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Provider Country</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap countryVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Provider City</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap cityVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Claim Nickname</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap nicknameVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Subscriber Name</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payeeVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Billed Amount</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap amountVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Claim Currency</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap  currencyVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Date of Service</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap dosVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Diagnosis</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap diagnosisVal"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Description of Treatment</p>
+               </div>
+               <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap descVal"></p>
+               </div>
+           </div>
+           <div class="row mt-5">
+               <div class="col-lg-12">
+                   <h5 class="mb-0 review-submit-col-title">Files</h5>
+                   <p class="review-submit-edit-icon mb-0" onclick="editFiles()">Edit
+                       <span>
+                           <i class="fa fa-pencil"></i>
+                       </span>
+                   </p>
+               </div>
+           </div>
+           <hr id="progressLine" class="mt-0">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div id="drop-area-submit-review">
+                       <div id="files-submit-review"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    <div class="col-lg-5 col-md-12 col-sm-12 col-12" id="view-reimbursement">
+       <div class="row">
+           <div class="col-lg-12">
+               <h5 class="mb-0 review-submit-col-title">Reimbursement Preference</h5>
+           </div>
+       </div>
+       <hr id="progressLine" class="mt-0">
+       <div class="row">
+           <div class="col-lg-12">
+
+               <p class="mb-0 text-left independentPref"> This is your current reimbursement preference. If you change your reimbursement preference now, any claims
+
+                   currently being processed will be paid using that preference. Alternatively, you may elect a one-time
+                   reimbursement preference for this claim only. </p>
+               <p class="mb-0 text-left dependentPref" style="display:none">This is the subscriber's current reimbursement preference and can be changed only by the subscriber. As a
+                    dependent, you have the option to elect a one-time reimbursement preference for this claim only.</p>
+                   
+           </div>
+       </div>
+       <div class="row mt-3 reimbursement-method-section" style="display:none">
+           <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+               <p class="font-weight-bold  mb-0">Reimbursement Method</p>
+           </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+               <p id="reimbursement-method-text" class="mb-0"></p>
+           </div>
+       </div>
+       <div id="eft-method" style="display:none">
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold mb-0">Payee Name</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-name-text"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Country</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-country-text"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Currency</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-currency-text"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Bank Name</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-bank-text"></p>
+               </div>
+           </div>
+           <div id="dynamicBankingField">
+          <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail1"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail1"></p>
+               </div>
+           </div>
+          <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail2"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail2"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField  lblDetail3"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail3"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail4"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail4"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail5"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail5"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail6"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail6"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail7"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail7"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail8"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail8"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField  lblDetail9"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail9"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail10"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail10"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail11"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail11"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail12"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail12"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail13"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail13"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField  lblDetail14"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail14"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblField lblDetail15"></p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valDetail15"></p>
+               </div>
+           </div>
+           </div>
+                       <div class="row" style="display:none">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress1">Bank Address 1</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress1"></p>
+               </div>
+           </div>
+           <div class="row" style="display:none">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress2">Bank Address 2</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress2"></p>
+               </div>
+           </div>
+           <div class="row" style="display:none">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress3">Bank Address 3</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress3"></p>
+               </div>
+           </div>
+           <div class="row" style="display:none">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress4">Bank Address 4</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress4"></p>
+               </div>
+           </div>
+            <!--<div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress5">Bank Address 5</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress5"></p>
+               </div>
+           </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress6">Bank Address 6</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress6"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0 lblAddress7">Bank Address 7</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap valAddress7"></p>
+               </div>
+           </div>-->
+
+       </div>
+       <!--end of eft-method -->
+       <div id="check-method" style="display:none">
+           <div class="row">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-12 my-2">
+                   <div class="check-method-text-box">
+                       <p class="dependentPref">You will be reimbursed via check to the <b>subscriber's</b> mailing address.  Typically payments issued by electronic funds transfer are received faster.
+                       </p>
+                       <p class="independentPref">You will be reimbursed via check to your mailing address. Typically payments issued by electronic funds transfer are received faster.</p>
+                       <!-- <p class="mb-0 font-italic">
+                           Click on the Edit Preferences button below to change your reimbursement preference.
+                       </p> -->
+                   </div>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Payee Name</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-name-text"></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Country</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap  payee-country-text">Philippines</p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="font-weight-bold  mb-0">Currency</p>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                   <p class="mb-0 text-values-wrap payee-currency-text"></p>
+               </div>
+           </div>
+       </div>
+       <!--end of check-method -->
+       <div class="row mt-4">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+               <button type="button" class="btn btn-outline-primary otp-btn" onclick="editOneTimePref()">Specify a different (one-time) reimbursement preference for this claim*</button>
+               <p class="mb-0 mt-3 text-left">*Choosing this option does not change your default preference for future claims.</p>
+               <p class="mb-0 text-left independentPref"> Note: We allow dependents over the age of 18 to specify a one-time reimbursement for their claims.</p>
+           </div>
+       </div>
+       <div class="row mt-4">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+               <button type="button" class="btn btn-primary edit-preference-btn" onclick="displayEditPreferences()">EDIT PREFERENCE</button>
+           </div>
+       </div>
+     </div>
+   </div>
+<!-- id=end of view-reimbursement -->
+<div id="view-reimburesment-btn-contaner">
+    <hr id="progressLine" class="mt-5">
+    <div class="row mt-4">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center submit-claim-actions">
+            <button class="btn btn-danger cancel-btn mb-2 mx-2" onclick="cancelClaim(event)">
+                <span class="button-text">Cancel</span>
+            </button>
+            <button id="review-claim-btn" class="btn btn-success submit-claim-btn mb-2 mx-2" onclick="submitClaim(event)">
+                <span class="button-text">Submit Claim</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- id=end of view-reimburesment-btn-contaner  view-reimbursement-->
+<div class="row">
+    <div class="row">
+        <div id="payee-note">
+            <div id="payee-note-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-6 text-left">
+                            <h3 class="mt-4">
+                                Payee Name
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 col-6 text-right">
+                            <button class="modal-close" onclick="closePayeeNote()"></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="mb-5">Payee Name as it appears on your bank account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<sly data-sly-include="editPaymentPreference.html" />
+
+<sly data-sly-include="editPreference.html" />                                                                                                                            

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Submit Claim Form"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    mode="{Boolean}true">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <title
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Submit Claims Progress Tracker"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="required-icon">
+                        <items jcr:primaryType="nt:unstructured">
+                            <member
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Member"
+                                fieldLabel="Member"
+                                name="./member"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <claimnick
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription=" Provider"
+                                fieldLabel=" Provider"
+                                name="./provider"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <providerCountry
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription=" Provider Country"
+                                fieldLabel="Provider Country"
+                                name="./providercountry"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <providerCity
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provider City"
+                                fieldLabel="Provider City"
+                                name="./providerCity"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <claimNickname
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Claim Nickname"
+                                fieldLabel="Claim Nickname"
+                                name="./claimNickname"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <billedamount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Billed Amount"
+                                fieldLabel="Billed Amount"
+                                name="./billedAmount"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <claimcurrency
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Claim Currency"
+                                fieldLabel="Claim Currency"
+                                name="./claimCurrency"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <dateofService
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Date of Service"
+                                fieldLabel="Date of Service"
+                                name="./dateofService"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <diagnosis
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                fieldDescription="Diagnosis"
+                                fieldLabel="Diagnosis"
+                                name="./diagnosis"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <descriptionofTreatment
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Description of Treatment"
+                                fieldLabel="Description of Treatment"
+                                name="./descriptionofTreatment"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                        </items>
+                    </columns>
+                </items>
+            </title>
+        </items>
+    </content>
+</jcr:root>

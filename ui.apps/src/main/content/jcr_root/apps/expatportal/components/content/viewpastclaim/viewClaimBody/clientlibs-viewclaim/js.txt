@@ -1,0 +1,7 @@
+#base=js
+main.js
+viewclaim.js
+claimsfilter.js
+redirection.js
+
+

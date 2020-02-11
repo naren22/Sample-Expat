@@ -1,0 +1,148 @@
+<input id="backbuttonstate" type="text" value="0" style="display:none;" />
+<sly data-sly-use.token="token.js" />
+    	<div id="header" data-tkey="${token.key}"  data-groupid="${token.grp}" data-fname="${token.fname}" data-eeid="${token.eeid}" data-lname="${token.lname}" data-dob="${token.dob}" data-loginpage="https://systest1.myuhc.com"
+			 data-sly-use.header="com.expatportal.core.models.component.HeaderComponentModel"
+	class="header-container" data-f-toggle="labels">
+	<div class="container">
+		<div class="row navbar navbar-expand-lg justify-content-between">
+			<a class="navbar-brand nav-link" data-external="true" href="#" data-link-url="${properties.logoLink}" href="javascript:void(0)" x-cq-linkchecker="valid">
+				<img class="logo" src="${header.headerMenu.logoImage}"
+                alt="${properties.logoAltText}">
+			</a>
+            <!-- <p>token: ${token.token}</p> -->
+
+			<button class="navbar-toggler" id="header-icon-btn" type="button"
+				data-toggle="collapse" data-target="#header-as"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="header-icon"> <i class="fa fa-user"></i>
+				</span>
+			</button>
+			<div class="collapse navbar-collapse" id="header-as" style="">
+				<ul class="navbar-nav ml-auto">
+					<li class="header-item mt-1">
+                            <a class="nav-link" id="btnHelp"  x-cq-linkchecker="valid" target="_blank" data-external="${header.headerMenu.externalHelp}" href="javascript:void(0);" data-link-url="${header.headerMenu.helpTextLink @ context='unsafe'}">
+			                  <span class="help">
+			                      <i class="fa fa-question-circle"></i> ${header.headerMenu.helpText}
+			                   <span>
+			                       <i class="fa fa-external-link"></i>
+			                    </span>
+			                   </span>
+			              </a>
+			         </li>
+			         
+			         <div id="account-item-mv">
+			                <li class="header-item">
+			                    <a class="nav-link" href="${header.headerMenu.accountSettingLink}">
+			                        <span class="acct-setting-label">
+			                            ${header.headerMenu.accountSettingText}
+			                            <span>
+			                                <i class="fa fa-external-link"></i>
+			                            </span>
+			                        </span>
+			                    </a>
+			                </li>
+			                <li class="header-item">
+			                    <a class="nav-link" href="${header.headerMenu.logoutLink}">
+			                        <span class="logout-label">
+			                             ${header.headerMenu.logoutText}
+			                        </span>
+			                    </a>
+			                </li>
+			            </div>
+									
+				 <li class="dropdown nav-item">
+			                <button class="btn account-btn" id="account-btn" type="button" data-toggle="dropdown">
+			                ${header.headerMenu.accountSettingProfileText}
+			                    <span class="caret-down" id="caret-down"></span>
+			                </button>
+			                <div class="dropdown-menu dropdown-menu-fallback" id="account-item" aria-labelledby="navbarDropdown">
+			                    <a data-external="true" id="btnAccountSetting" class="dropdown-item" 
+			                    href="${header.headerMenu.accountSettingLink}" target="_blank">${header.headerMenu.accountSettingText}
+			                        <span>
+			                            <i class="fa fa-external-link"></i>
+			                        </span>
+			                    </a>
+			                    <a class="dropdown-item" id="btnLogout" href="${header.headerMenu.logoutLink}">
+			                    ${header.headerMenu.logoutText}</a>
+			                </div>
+			            </li> 
+			            
+			            
+			           				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid testnav ${nav.logoLink}">
+	<nav class="row navbar navbar-expand-lg navbar-header py-0">
+		<div class="container">
+			<button class="navbar-toggler nav-hamburger"
+				id="navigation-toggle-btn" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars "></i>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav nav-links"
+					data-sly-list.menu="${header.headerMenu.menu}">
+					<li data-sly-test="${menu.hasSubMenu == false && menuList.index < 5}" class="nav-item">
+                        <a x-cq-linkchecker="valid" data-external="${menu.externalFlag}" class="nav-link test-link" href="javascript:void(0)" data-link-url="${menu.linkURL @ context='unsafe'}">${menu.linkName}</a>
+					</li>
+					<li data-sly-test="${menu.hasSubMenu == true && menuList.index < 5}"
+						class="nav-item dropdown">
+						<a x-cq-linkchecker="valid" class="nav-link subnav ${submenu.externalFlag}" href="${submenu.linkURL}"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">${menu.linkName}</a>
+						<div data-sly-list.submenu="${menu.subMenu}"
+							class="dropdown-menu dropdown-menu-fallback" aria-labelledby="navbarDropdown">
+                                <a x-cq-linkchecker="valid" data-external="${submenu.externalFlag}" class="dropdown-item" data-link-url="${submenu.linkURL}" href="javascript:void(0)" target="${submenu.openInNewTabFlag ? '_blank':''}">${submenu.linkName}
+								<sly data-sly-test="${submenu.openInNewTabFlag}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+								</a>
+								
+									
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<!--token expire modal -->
+<div id="page-timeout" style="display: none;">
+        <div id="page-timeout-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+                        <h3 class="mb-0">Your session is about to expire</h3>
+    
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                        <button class="btn modal-close" onclick="reloadPageSession()"></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col text-left">
+                        <p class="m-0">Your session will expire in
+                            <span id="page-timeout-timer">01:06</span>. Do you want to continue working?</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center page-timeout-button">
+                        <button type="button" class="btn btn-danger" onclick="closePageSession()">NO. CLOSE THE APPLICATION</button>
+                        <button type="button" class="btn btn-primary px-3" onclick="reloadPageSession()">YES. I WANT TO CONTINUE</button>
+                    </div>
+                </div>
+            </div>
+       </div>
+</div>

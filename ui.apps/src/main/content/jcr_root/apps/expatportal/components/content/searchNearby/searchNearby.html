@@ -1,0 +1,22 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.js @ categories='expatportal.searchNearBy'}"/>
+<div class="row justify-content-md-center quicklinks">
+    <div id="searchNearby" class="col-lg-2 col-md-4 col-sm-4 text-center quicklink my-3">
+        <a href="#">
+            <div class="icon-container">
+                <i class="fa fa-map-marker"></i>
+            </div>
+        </a>
+        <p class="description">Search Nearby</p>
+    </div>
+    <p id="location-empty-error" class="text-danger font-weight-bold" style="display:none">Please select location.</p>
+    <div id="my-uhc-anchor" class="col-lg-2 col-md-4 col-sm-4 text-center quicklink my-3">
+        <a class="my-uhc-anchor" href="${properties.linkUrl}" data-link="accessPortal" target="_blank">
+            <div class="icon-container">
+                <img class="myuhc-icon" src= "${properties.searchNearbyFile}" />  
+            </div>
+        </a>
+		<p class="description"> ${properties.buttonDescription}
+        </p>
+    </div>
+</div>

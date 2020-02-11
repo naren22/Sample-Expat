@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-03-12T08:56:36.500-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-04-22T02:33:59.140Z"
+        cq:lastReplicatedBy="nnallani"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/expatportal/settings/wcm/templates/home-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="CONTACT US"
+        jcr:uuid="638386f9-f720-4ecf-8626-2b2f98af3bf1"
+        sling:resourceType="expatportal/components/structure/homepage"
+        hideInNav="true"/>
+</jcr:root>

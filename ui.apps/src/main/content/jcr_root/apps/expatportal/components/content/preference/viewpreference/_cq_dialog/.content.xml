@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="View Preference"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+        <items jcr:primaryType="nt:unstructured">
+            <instruction
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instructions"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Main Heading"
+                                fieldLabel="Main Heading"
+                                key="mainHeading"
+                                maxlength="50"
+                                name="./mainHeading"/>
+                            <subheading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="button text"
+                                fieldLabel="Button Text"
+                                key="bText"
+                                maxlength="50"
+                                name="./bText"/>
+                            <desctext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Description Text"
+                                fieldLabel="Description Text"
+                                key="desc"
+                                maxlength="350"
+                                name="./desc"/>
+                            <desctext2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Description  - 2"
+                                fieldLabel="Description Text - 2"
+                                key="desc"
+                                maxlength="350"
+                                name="./descTwo"/>
+                            <depdesc
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Description Text (dependent)"
+                                fieldLabel="Description Text (dependent)"
+                                key="depdesc"
+                                maxlength="350"
+                                name="./depdesc"/>
+                            <depdesctext2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Description  - 2(dependent)"
+                                fieldLabel="Description Text - 2(dependent)"
+                                key="depdesc2"
+                                maxlength="350"
+                                name="./depdescTwo"/>
+                        </items>
+                    </columns>
+                </items>
+            </instruction>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,50 @@
+.view-claim-member p{
+ overflow-wrap: normal;
+}
+
+.view-claim-cards-container {
+    background-color: #eee;
+    max-width: 800px;
+    margin: 15px 0 15px;
+    padding: 32px 24px;
+}
+
+.icon-container-rounded svg {
+    height: 2.5em;
+    width: auto;
+}
+
+.panel .mt-3.mb-5{
+	
+}
+
+#amount-billed ,#amount-paid{
+  font-weight: bold; }
+
+#dollarBilled , #dollarPaid,#currency-paid,#currency-billed{
+  font-size: 12px;
+  font-weight: bold; }
+
+#submissionID {
+  font-size: 0.9em; }
+
+ #view-claim-submissionvalue{
+    word-wrap: normal;
+}
+.my-uhc-link{
+  cursor: pointer;
+}
+
+a.my-uhc-link:hover {
+    color: #00163b !important;
+}
+
+.my-uhc-link {
+    color: #003DA1 !important;
+}
+
+ @media not all and (min-resolution: 0.001dpcm) {
+ @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+ #view-claim-submissionvalue {
+      word-break: break-all; } } }
+

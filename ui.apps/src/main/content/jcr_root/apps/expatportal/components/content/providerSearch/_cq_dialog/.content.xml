@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Provider search Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tokenURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint point for getting token"
+                        fieldLabel="Token API URL"
+                        name="./tokenURL"/>
+                    <grantType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Please enter grant type"
+                        fieldLabel="Grant Type"
+                        name="./grantType"/>
+                    <clientId
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Please enter client ID"
+                        fieldLabel="Client ID"
+                        name="./clientId"/>
+                    <clientSecret
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Please enter client secret"
+                        fieldLabel="Client Secret"
+                        name="./clientSecret"/>
+                    <redirecturl
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="Path to redirect"
+                        fieldLabel="Redirect Url"
+                        name="./redirectUrl"/>
+                    <searchSuggestionsURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for search suggestions"
+                        fieldLabel="Search suggestions API URL"
+                        name="./searchSuggestionsURL"/>
+                    <filtersURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for filters api"
+                        fieldLabel="Filters API URL"
+                        name="./filtersURL"/>
+                    <searchURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for filters api"
+                        fieldLabel="Search API URL"
+                        name="./searchURL"/>
+                    <providerDetailURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for filters api"
+                        fieldLabel="Providers API URL"
+                        name="./providerDetailURL"/>
+                    <locationURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for filters api"
+                        fieldLabel="Location API URL"
+                        name="./locationURL"/>
+                    <memberURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Endpoint for filters api"
+                        fieldLabel="Member API URL"
+                        name="./memberURL"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-10-10T10:06:34.982-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-09-17T08:55:26.452-04:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/expatportal/settings/wcm/templates/provider-search"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="FIND AN INTERNATIONAL PROVIDER"
+        jcr:uuid="505b522c-291e-4dab-b224-8614354abd59"
+        sling:resourceType="expatportal/components/structure/provider-search"
+        sling:vanityPath="/findcare/find-an-international-provider.html">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <providersearch
+                jcr:created="{Date}2019-02-25T22:05:28.637-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-10-10T10:06:34.973-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/providerSearch"
+                clientId="JqDBErWoPao5XUjiHQILiBYtNJjEKmpU"
+                clientSecret="jimagdJ8EtlZ4e3ZTzTAeP6qnIHXCLtW"
+                filtersURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg/provider-attributes/v1?type=ALL"
+                grantType="client_credentials"
+                id="10603"
+                locationURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg-gi/locations/v1?location="
+                memberURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg-gi/member-locations/v1"
+                providerDetailURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg/providers/v1/"
+                searchSuggestionsURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg/provider-suggestions/v1/search"
+                searchURL="https://gateway-stage-dmz.optum.com/api/dev/cdm/uhcg/providers/v1/search"
+                tokenURL="https://gateway-stage-dmz.optum.com/auth/oauth2/token"/>
+            <searchnearby
+                jcr:created="{Date}2019-04-14T18:37:28.182Z"
+                jcr:createdBy="nnallani"
+                jcr:lastModified="{Date}2019-09-18T13:13:49.956-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/searchNearby"
+                buttonDescription="Find a provider in us naren"
+                iconPath="/content/dam/expatportal/assets/icons/us-map-white.svg"
+                linkUrl="https://www.google.com/"
+                tokenURL="this is url"/>
+        </par>
+        <left-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <right-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

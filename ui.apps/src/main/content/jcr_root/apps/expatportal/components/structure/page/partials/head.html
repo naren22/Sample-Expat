@@ -1,0 +1,115 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+ <title>${pageProperties['pageTitle'] @ context='scriptString'} | ${pageProperties['subtitle'] @ context='scriptString'}</title> 
+
+	<script type="text/javascript">
+	// Global Pagedatalayer (Adobe Tagging) 
+	var formErrors = [];
+	window.pageDataLayer = {
+	
+	    "content": {
+	        "pageName":  "${pageProperties['jcr:title'] @ context='scriptString'}",
+	        "siteSectionL1": "",           
+	        "siteSectionL2": "",           
+	        "website": "uhcglobalinsurance",
+	        "businessUnit": "uhc",
+	        "referringSite": "", 
+	        "language": "en" 
+	    }
+	};
+	
+	window.publishPostPageData = function(name, obj) {
+	    for (var attrname in obj) {
+	        if (obj.hasOwnProperty(attrname)) {
+	            pageDataLayer[attrname] = obj[attrname];
+	        }
+	    }
+	    try {
+	        obj = JSON.stringify(obj, false, 4);
+	        console.log(name, obj);
+	    } catch (e) {}
+	};
+	
+	function tagPublishPostPageData(tagInfo, trackEvent){
+		window.publishPostPageData(trackEvent,{
+            "actions": {   
+                "linkText": tagInfo,
+                "linkDescription": tagInfo            
+            }   
+        });
+
+        // Satellite Function Call 
+        _satellite.track(trackEvent);
+	}
+	
+	function tagSystemErrorNote(errorName, errorCode){
+		window.publishPostPageData('trackErrorPageLoad',{
+            "error": {   
+                "errorType": "client-side error",
+                "errorName": errorName,
+                "errorCode": errorCode
+            }   
+        });
+
+        // Satellite Function Call 
+        _satellite.track('trackErrorPageLoad');
+	}
+
+	window.validationErrorPageData = function(name, obj) {
+	    for (var attrname in obj) {
+	        if (obj.hasOwnProperty(attrname)) {
+	            pageDataLayer[attrname] = obj[attrname];
+	        }
+	    }
+        try {
+	        obj = JSON.stringify(obj, false, 4);
+	        console.log(name, obj);
+	    } catch (e) {}
+	};
+	
+	function tagFormError(errorInfo, trackEvent){
+		formErrors.push({"errorname" : errorInfo});
+        window.validationErrorPageData(trackEvent, {
+            'formerror' : formErrors
+        });
+
+        // Satellite Function Call 
+        _satellite.track(trackEvent);
+	}
+	function tagFormErrorStep1(errorInfo, trackEvent){
+        if(errorInfo.length > 0){
+            window.validationErrorPageData(trackEvent, {
+                'formerror' : errorInfo
+            });
+    
+            // Satellite Function Call 
+            _satellite.track(trackEvent);
+        }
+	}
+	
+	function tagUploadError(errorName, trackEvent){
+		window.publishPostPageData(trackEvent,{
+            "uploaderror": {   
+			       "errorName": errorName,
+			} 
+        });   
+        // Satellite Function Call 
+        _satellite.track(trackEvent);
+	}
+	</script>
+	
+	<script src="//assets.adobedtm.com/launch-EN7ae963344fd9448aa06c693c14cf5948-development.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+
+
+	<title></title>
+
+    <meta data-sly-call="${clientLib.css @ categories='expatportal.all'}" data-sly-unwrap></meta>
+
+	
+</head>

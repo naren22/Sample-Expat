@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-10-28T13:46:51.421-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-09-17T08:55:26.452-04:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/expatportal/settings/wcm/templates/home-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home"
+        jcr:uuid="c6b9e24c-1ad1-44e2-bef1-a6a8084a8c44"
+        sling:resourceType="expatportal/components/structure/homepage">
+        <iParHeader
+            jcr:lastModified="{Date}2019-04-24T14:42:25.908Z"
+            jcr:lastModifiedBy="nnallani"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys"
+            inheritance="cancel"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <dashboard
+                jcr:created="{Date}2019-07-04T16:13:41.420-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-10-22T08:29:00.182-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/dashboard"
+                dentalMemberIdText="DENTAL MEMBER ID:"
+                medicalMemberIdText="MEDICAL, MENTAL HEALTH ID:"
+                rxMemberIdText="RX MEMBER ID:"
+                textIsRich="true"
+                visionMemberIdText="VISION MEMBER ID:"
+                welcomeText="&lt;p>&lt;span id=&quot;memberName&quot;>&lt;/span>,Welcome to Global Gateway&lt;/p>&#xd;&#xa;">
+                <rotatingMessages jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        clientId="default"
+                        message1="hello,dfghtui hgfyutdft fiyuyo hfdtydrx dyiuyk giydtusxf gyid"
+                        message2="hi dfuyipuoik' liuytrdf kjhidjgx kiopyitufy opyiturydtsxgn ;opiturydg"
+                        message3="hellobvtyi ytyiturd lutrsrz jltrdsx opitd uiyf"/>
+                </rotatingMessages>
+            </dashboard>
+            <quicklinks
+                jcr:created="{Date}2019-06-30T10:57:13.704-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-10-28T13:46:51.403-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/quickLinks"
+                buttonDescription="Access to US portal here"
+                description="Need to access services within the United States?"
+                fileReference1="/content/dam/expatportal/us-map-white.svg"
+                iconPath="content/dam/expatportal/maps/us-united-states-russia-map-america-flag-s.png"
+                isExternalLink="true"
+                linkUrl="/content/expatportal/homepage"
+                quickLinkFile="/content/dam/expatportal/us-map-blue.svg">
+                <buttons jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        buttonDescription="FIND AN INTERNATIONAL PROVIDER"
+                        iconPath="/content/dam/expatportal/Arrange Dp.png"
+                        isExternalLink="true"
+                        linkUrl="/content/expatportal/findcare/find-an-international-provider.external.html"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        buttonDescription="VIEW YOUR BENEFITS"
+                        externalLinkRequired="true"
+                        iconPath="/content/dam/expatportal/icon-benefits-white.svg"
+                        isExternalLink="true"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/ViewBenefits"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        buttonDescription="SUBMIT A CLAIM"
+                        iconPath="/content/dam/expatportal/View claims.png"
+                        isExternalLink="true"
+                        linkUrl="/content/expatportal/claims/submitnewclaims.external.html"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        buttonDescription="VIEW YOUR INTERNATIONAL CLAIMS"
+                        iconPath="/content/dam/expatportal/icon-benefits1.svg"
+                        isExternalLink="true"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToViewClaims"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        buttonDescription="ARRANGE DIRECT PAYMENT TO A PROVIDER"
+                        iconPath="/content/dam/expatportal/Arrange Dp.png"
+                        isExternalLink="true"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToRequestGop"/>
+                </buttons>
+            </quicklinks>
+            <bottombuttons
+                jcr:created="{Date}2019-07-04T16:14:13.070-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-08-30T11:34:30.631-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/bottomButtons"
+                cardDescription1="jfkshsdfhngv sjkgbnoadrlfgv  erkjgdfnaevdfkl jkerhdgnajdfvkebgiouadv jaeurdgn jhiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiir rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrruh uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuh uyaggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhha uhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uhasssssssssssssssssssssssssssssssssshds"
+                cardDescription2="wugieeeeeeeeeei yyyyyyyyyyyyyyyyyu yuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwe ;yuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu iyuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu yuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu yuGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG YUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUO YG;OIe gwy OYGO ygoooooooo; YGGGGGGGGGGGG;o gysEOI; YWWWWWWWWWWWWWW ygoooooooooooooooooooooooooo"
+                cardDescription3="wefjksdbvkjhgsbfvjksfguejbjh whg"
+                cardLink1="/content/expatportal/claims"
+                cardLink3="/content/expatportal/findcare/find-an-international-provider"
+                cardTitle1="first"
+                cardTitle2="second"
+                cardTitle3="third"
+                defaultLink="/content/expatportal/homepage"/>
+        </par>
+        <image/>
+    </jcr:content>
+</jcr:root>

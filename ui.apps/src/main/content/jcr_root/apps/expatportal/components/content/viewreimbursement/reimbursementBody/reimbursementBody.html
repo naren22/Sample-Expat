@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='expatportal.clientlibs-viewreimbursement'}"/>
+
+<div class="row">
+    <div class="col-lg-12 header-text">
+        <h1>
+            <i class="fa fa-file"></i> View Your Reimbursements</h1>
+    </div>
+</div>
+
+
+<hr id="progressLine">
+<div class="row mt-4 px-3">
+	<sly data-sly-resource="${ @path='filter', resourceType='/apps/expatportal/components/content/viewreimbursement/reimbursementFilters'}"></sly>
+	<sly  data-sly-resource="${ @path='claimTile', resourceType='/apps/expatportal/components/content/viewreimbursement/reimbursementTiles'}"></sly>
+
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.js @ categories='expatportal.clientlibs-viewreimbursement'}"/>
+

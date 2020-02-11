@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-03-13T08:17:57.172-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-04-22T02:33:59.140Z"
+        cq:lastReplicatedBy="nnallani"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/expatportal/settings/wcm/templates/home-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Browser Preferences"
+        jcr:uuid="044e24df-ae11-4be7-91c1-1d83299f11ac"
+        sling:resourceType="expatportal/components/structure/homepage"
+        hideInNav="true">
+        <par
+            jcr:lastModified="{Date}2019-02-24T14:52:05.082-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <responsivegrid
+                jcr:created="{Date}2019-02-24T13:51:45.519-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-24T13:51:45.519-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <text
+                jcr:created="{Date}2019-03-13T08:16:13.335-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-13T08:17:40.408-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/text"
+                text="[&lt;p>&lt;b>Browser Preferences&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>This site is best viewed using Internet Explorer 10+\, Firefox\, or Chrome.&lt;/b>&lt;/p>&#xd;&#xa;,]"
+                textIsRich="[true,true]"/>
+        </par>
+    </jcr:content>
+</jcr:root>

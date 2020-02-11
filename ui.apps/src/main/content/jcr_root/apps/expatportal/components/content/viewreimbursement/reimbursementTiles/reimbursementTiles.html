@@ -1,0 +1,81 @@
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+ <sly data-sly-call="${clientlib.all @ categories='expatportal.clientlibs-viewreimbursement'}"/>
+
+   <div id="tiles-top" class="sort-container col-lg-9">
+   <p id="noClaimsOnFile" class="mt-4 text-center" style="display:none">You have no international claims on file.</p>
+   <p id="noClaimsByCriteria" class="mt-4 text-center" style="display:none">You have no claims to show using the selected criteria.</p>
+        <div id="sortByFilterList" class="row mb-2" style="display:none">
+            <div class="col-lg-6 mt-2 pr-2 filter-label">
+                <label for="filterSortByClaims">
+                    SORT BY
+                </label>
+            </div>
+            <div class="col-lg-6">
+                <select class="form-control" id="filterSortByClaims">
+                    
+                </select>
+            </div>
+        </div>
+        <!--Start of Card -->
+        
+        <div id="reimbursementClaims" style="display:none">
+        
+         </div>
+        <div id="view-reimbursement-tile-template" style="display:none">
+        <div class="container-fluid view-reimbursement-cards-container mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row reimbursement-details mt-4 mb-2">
+                    <div class="col-lg-3 col-md-3 mb-4">
+                        <p>Payment Number</p>
+                        <p id="payment-number"></p>
+                        <button class="btn btn-primary" id="payment-number-button">VIEW PAYMENT DETAILS</button>
+                    </div>
+                    <input type="hidden" id="paymentAccount" />
+                    <div class="col-lg-3 col-md-3 mb-3">
+                        <p>Amount Paid</p>
+                        <p id="amountreimbursed"></p>
+                        <p id="currencyreimbursed"></p>
+                        <p id="dollarreimbursed"></p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 mb-3">
+                        <div class="payment-date-details mb-4"  id="paydateRow">
+                            <p>Payment Date</p>
+                            <p id="paydate"></p>
+                        </div>
+                        <div class="payment-type-details" id="paytypeRow">
+                            <p>Payment Type</p>
+                            <p id="paytype"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="claim-id-details mb-4"  id = "claimIdListRow">
+                            <p>Claims ID(s)</p>
+                            <p id="claimIdList"></p>
+                        </div>
+                        
+                        <div class="date-of-service-details"  id = "dateServiceRow">
+                            <p>Date of Service</p>
+                            <p id="dateService"></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+       
+        <!-- end of card -->
+           <div class="col-lg-12" id="pagination">
+            <div class="controls-pagination text-right">
+                <span class="description" id="totalReimbursementPages"></span>
+                <button class="btn btn-outline-primary page-prev" id="prev" aria-disabled="true"  disabled="disabled">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-outline-primary page-next" id="next" aria-disabled="true">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+

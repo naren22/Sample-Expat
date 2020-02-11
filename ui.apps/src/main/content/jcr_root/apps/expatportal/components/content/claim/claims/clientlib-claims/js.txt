@@ -1,0 +1,16 @@
+#base=js
+
+manage-step.js
+
+moment.js
+bootstrapdatepicker.js
+main.js
+claiminfo.js
+step1_validation.js
+reviewClaim.js
+preferences.js
+
+editPreference.js
+editPreference-default.js
+//editPrefrenceValidation.js
+

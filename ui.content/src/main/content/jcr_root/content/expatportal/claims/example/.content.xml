@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-03-11T11:44:50.167-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-04-22T02:33:59.140Z"
+        cq:lastReplicatedBy="nnallani"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/expatportal/settings/wcm/templates/home-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="SUBMIT NEW CLAIM"
+        jcr:uuid="76b521ab-c508-4e95-bdde-28097d6f8e53"
+        sling:resourceType="expatportal/components/structure/homepage">
+        <par
+            jcr:lastModified="{Date}2019-02-24T14:52:05.082-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <responsivegrid
+                jcr:created="{Date}2019-02-24T13:51:45.519-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-24T13:51:45.519-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <submitclaimsprogress
+                jcr:created="{Date}2019-03-07T16:26:05.473-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-11T11:44:50.159-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/SubmitClaimsProgressTracker"
+                claimTitle="SUBMIT YOUR CLAIM"
+                enterClaimStep="Enter Claims Information"
+                iconPath="fa fa-file"
+                submitFormTitle="Submit Claim"
+                text="&lt;h3>Enter Claim Information&lt;/h3>&#xd;&#xa;&lt;p>We're happy to process your claim for you. Please provide your claim information below.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>A separate claim should be submitted for each:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li style=&quot;text-align: left;&quot;>Member&lt;/li>&#xd;&#xa;&lt;li style=&quot;text-align: left;&quot;>Provider&lt;/li>&#xd;&#xa;&lt;li style=&quot;text-align: left;&quot;>Claim Currency&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>At the end of this process you will receive a claim submission number.&lt;/p>&#xd;&#xa;&lt;p>&lt;i>All fields marked with an asterisk (*) are required.&lt;/i>&lt;/p>&#xd;&#xa;"
+                textIsRich="true"
+                titlecolor="#003DA1"
+                uploadFilesTitle="Upload Files"/>
+            <submitclaimsform
+                jcr:created="{Date}2019-03-08T09:16:18.656-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-08T09:16:18.656-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/SubmitClaimsForm"/>
+        </par>
+    </jcr:content>
+</jcr:root>

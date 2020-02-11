@@ -1,0 +1,77 @@
+<div id="noResult" style="display:none;">
+        <p class="refine-title pb-1"></p>
+        <div class="row">
+            <div class="col-lg-12 text-center" id="text-center">
+                <h2>Your search provided no results.</h2>
+                <div class="no-result-message-container">
+                    <p class="no-result-message">Contact us and we're happy to help. You can also visit any provider of your choice.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                <button class="btn btn-primary" onclick="openHowCanWeHelp()">Contact us</button>
+                <!-- <button class="btn btn-primary">Plan a Virtual Visit<sup>1</sup></button> -->
+            </div>
+        </div>
+        <div id="how-can-we-help-dialog" class="row mt-3 justify-content-center how-can-we-help-container" style="display: none;">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-8 no-result-help-container">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                                <h3>How Can We Help?</h3>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 text-right">
+                                <button class="modal-close" onclick="closeHowCanWeHelp()"></button>
+                                <!-- <h3 class="mb-0">
+                                    <i onclick="closeHowCanWeHelp()" class="fa fa-times location-close"></i>
+                                </h3> -->
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                                <div class="icon-container mb-2">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                            <div id="contact-us-phone-numbers" class="col-lg-10 col-md-12 col-sm-12 col-12 help-contact-us-info">
+                                <p>Outside the U.S. or Canada: +1.763.274.7362</p>
+                                <p>In the U.S. or Canada: toll-free at +1.877.844.0280</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                                <div class="icon-container mb-2">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-md-12 col-sm-12 col-12 help-contact-us-mail">
+                                <p><a href="mailto:Expatinsurance_MemberServices@uhcglobal.com">Expatinsurance_MemberServices@uhcglobal.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+
+<script>
+    $(document).ready(function() {
+        var groupId = $("#header").attr("data-groupid");
+        if (groupId && groupId == "0911754") {
+            $("#contact-us-phone-numbers").html('<p>Outside the U.S. or Canada: +1.763.274.7367</p> <p>In the U.S. or Canada: toll-free at +1.877.294.2042</p>');
+        } else if (groupId && (groupId == "0914234" || groupId == "0914235")) {
+            $("#contact-us-phone-numbers").html('<p>Outside the U.S. or Canada: +1.763.274.7362</p> <p>In the U.S. or Canada: toll-free at +1.844.231.9074</p>');
+        }
+
+    });
+
+function openHowCanWeHelp() {
+    document.getElementById("how-can-we-help-dialog").style.display = "block";
+
+
+}
+
+function closeHowCanWeHelp() {
+    document.getElementById("how-can-we-help-dialog").style.display = "none";
+} 
+</script>

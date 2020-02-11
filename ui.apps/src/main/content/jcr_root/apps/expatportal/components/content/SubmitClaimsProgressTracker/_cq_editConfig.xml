@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:actions="[text:Menu Multiple Choice Checkbox,-,edit,copymove,delete]"
+    cq:dialogMode="floating"
+    cq:disableTargeting="{Boolean}true"
+    cq:layout="editbar"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afterdelete="REFRESH_SELF"
+        afteredit="REFRESH_SELF"/>
+    <cq:inplaceEditing
+        jcr:primaryType="cq:InplaceEditingConfig"
+        active="{Boolean}true"
+        editorType="hybrid">
+        <cq:childEditors jcr:primaryType="nt:unstructured">
+            <answerText
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Answer Text"
+                type="text"/>
+            <answerExplanation
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Answer Explanation"
+                type="text"/>
+            <config jcr:primaryType="nt:unstructured">
+                <answerTextEditor
+                    jcr:primaryType="nt:unstructured"
+                    editElementQuery="div.answerText"
+                    name="./answerText"
+                    propertyName="./answerText">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                </answerTextEditor>
+                <answerExplanationEditor
+                    jcr:primaryType="nt:unstructured"
+                    editElementQuery="div.answerExplanation"
+                    name="./answerExplanation"
+                    propertyName="./answerExplanation">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                </answerExplanationEditor>
+                <questionTextEditor
+                    jcr:primaryType="nt:unstructured"
+                    editElementQuery="div.questionText"
+                    name="./questionText"
+                    propertyName="./questionText">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                </questionTextEditor>
+            </config>
+            <questionText
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Question Text"
+                type="text"/>
+        </cq:childEditors>
+    </cq:inplaceEditing>
+</jcr:root>

@@ -1,0 +1,76 @@
+/*
+ *  Copyright 2015 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+package com.expatportal.core.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.servlets.HttpConstants;
+import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.expatportal.core.service.UploadFiles;
+import com.expatportal.core.service.UploadServiceImpl;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+/**
+ * Servlet that deletes bulk files from upload files path.
+ */
+@Component(service=Servlet.class,
+           property={
+                   Constants.SERVICE_DESCRIPTION + "=Remove All Files Servlet",
+                   "sling.servlet.methods=" + HttpConstants.METHOD_POST,
+                   "sling.servlet.resourceTypes="+ "mynew/components/structure/remove",
+                   "sling.servlet.paths="+ "/bin/file/removeAll",
+                   "sling.servlet.extensions=" + "json"
+           })
+public class RemoveAllFilesServlet extends SlingAllMethodsServlet {
+
+    private static final long serialVersionUid = 1L;
+    Logger log = LoggerFactory.getLogger(RemoveAllFilesServlet.class);
+
+    @Reference
+    private UploadFiles service;
+
+    @Override
+    protected void doPost(final SlingHttpServletRequest req,
+            final SlingHttpServletResponse resp) throws ServletException, IOException {
+        JsonObject jo= new JsonObject();
+        try {
+            String status=service.deleteAllFiles(req);
+            
+            jo.add("status",new Gson().toJsonTree(status) );
+            
+        } catch (Exception e) {
+        	jo.add("status",new Gson().toJsonTree("failed") );
+        	jo.add("error" ,  new Gson().toJsonTree("Remove File Failed ==>"+e));
+        	log.error(e.getMessage());
+        	
+        }
+        resp.setContentType("text/json");
+        resp.getWriter().write(jo.toString());
+    }
+}

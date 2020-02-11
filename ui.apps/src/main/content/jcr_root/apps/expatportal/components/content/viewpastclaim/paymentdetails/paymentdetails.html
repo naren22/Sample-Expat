@@ -1,0 +1,48 @@
+<div class="row mx-2 mt-3">
+    		<div class="header-text">
+        		<h1>
+           		 <a href="#">
+              	  <i class="fa fa-chevron-circle-left"></i>
+         		   </a>
+           		 <a href="#" id="payment-detail-header-title"></a>
+       			 </h1>
+    		</div>
+	</div>
+
+
+ <div class="col-lg-9">
+    <h4 class="mb-3 mt-3">PAYMENT DETAILS</h4>
+    <div class="row payment-details mb-3">
+        <div class="col-lg-3 col-md-3">
+            <p>Amount Paid</p>
+            <p id="amount"></p>
+            <p id="currency"></p>
+            <p id="dollar"></p>
+        </div>
+        <div class="col-lg-3 col-md-3">
+
+            <div class="payment-type-details">
+                <p>Payment Type</p>
+                <p id="paytype"></p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <div class="payment-date-details">
+                <p>Payment Date</p>
+                <p id="paydate"></p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <div class="bank-account-details">
+                <p id="bank-account-label">Payment Bank Account</p>
+                <p id="bank-account"></p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='expatportal.paymentdetails'}"/>
+
+    <div class="progressLine">
+<sly data-sly-resource="${ @path='/etc/designs/expatportal/header', resourceType='expatportal/components/content/viewpastclaim/relatedclaims'}" data-sly-unwrap/>
+</div>

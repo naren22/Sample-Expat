@@ -1,0 +1,4 @@
+#base=css
+bootstrap.min.css
+font-awesome-4.7.0.min.css
+bootstrap-datetimepicker.min.css

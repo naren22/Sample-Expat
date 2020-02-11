@@ -1,0 +1,169 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='expatportal.providerDetailSearch'}"/>
+<div class="row mt-4">
+   <div id="change-location">
+      <div id="change-location-container">
+         <div class="container">
+            <div class="row">
+               <div class="col align-self-end text-right">
+                  <button class="btn modal-close" onclick="closeChangeLocation()"></button>
+               </div>
+            </div>
+            <div class="col-lg-12 col-12 d-flex justify-content-center">
+               <h3 class="mb-0">Where would you like to find a provider?</h3>
+            </div>
+            <!-- <hr /> -->
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col-sm-12 search-menu text-center">
+                  <p>Current Location</p>
+                  <p id="location">
+
+                  </p>
+               </div> 
+            </div>
+            <div class="row justify-content-md-center mt-4">
+               <div class="col-lg-6">
+                  <div class="form-group location-dropdown text-center">
+                     <label for="location-state">Enter a city and country*</label>
+                     <!-- <input type="text" class="form-control" list="country" name="country" id="submitClaimCountry" autocomplete=on> -->
+                     <input type="text" class="form-control changeLocation" placeholder="City, Province, Country" name="loc" id="location4" />
+
+                  </div><div id="location-change-container" class="location-change">
+                   		<p>Please select valid city and country.</p>
+                  </div>
+                  <p>* If you are looking for a provider in the United States, Puerto Rico or U.S. Virgin Islands, please
+                  visit myuhc.com to complete a U.S. Provider Search.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row mt-2">
+            <div class="col text-center location-button">
+            <button type="button" class="btn btn-danger" onclick="closeChangeLocation()">CANCEL</button>
+            <button type="button" class="btn btn-primary" id="changeLocBtn">CHANGE TO THIS LOCATION</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-12 col-md-12 col-sm-12 search-menu text-center">
+   <h3 class="mb-0">What type of care</h3>
+   <h3 class="mb-0">can we help you find near:</h3>
+   <p id="location1">
+   </p>
+   <a href="#" onclick="openChangeLocation()">
+   CHANGE LOCATION
+   </a>
+   <!-- <div class="row mt-3">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 col-centered">
+          <div class="input-group search-bar-container">
+              <input type="text" placeholder="Doctor name of Speciality, Facility Name, Clinic Name, Medical Group Name" name="search"
+              />
+              <div class="input-group-append search-bar-button">
+                  <button type="submit" class="btn">
+                      <i class="fa fa-search"></i>
+                      <span>Search</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+      </div> -->
+   <div class="row justify-content-lg-center mt-3">
+   <div class="col col-lg-2 col-md-2 col-sm-1 col-1">
+   </div>
+   <div class="col-lg-6 col-md-8 col-sm-10 col-10">
+   <form class="input-group  search-bar-container" id="form-search">
+   <input type="text" autocomplete="false" id="provider-search-value" class="form-control"  placeholder="Specialty, Doctor Name, Facility Name"/>
+   <input type="hidden" id="searchComponentPath" value="${resource.getPath}.getSearchResults.POST.html"/>
+   <input type="hidden" id="providerDetailAPI" value="${resource.getPath}.getProviderDeails.html"/>
+   <input type="hidden" id="searchSuggestionComponentPath" value="${resource.getPath}.getSearchSuggestion.POST.html"/>
+   <input type="hidden" id="memberLocationPath" value="${resource.getPath}.setMemberLocation.POST.html"/>
+   <input type="hidden" id="changeLocationAPI" value="${resource.getPath}.getLocationResults.html"/>
+   <input type="hidden" id="getMemberLocationAPI" value="${resource.getPath}.getMemberLocation.html"/> 
+   <div class="input-group-append">
+  <button class="btn search-menu-btn" type="submit" id = "buttonSearch">
+   <i class="fa fa-search"></i>
+   <span class="search-text">Search</span> 
+   </button>
+   </div>
+   </form>
+   <div id="search-criteria-error-msg" class="search-criteria text-left">
+   <div class="container-fluid">
+   <div class="row">
+   <p class="text-danger">Please enter search criteria.</p>
+   </div>
+   </div>
+   </div>
+   <div id="autocomplete-container" class="search-suggestion text-left">
+   <div class="container-fluid pb-3">
+   <div class="row border-bottom">
+   <div class="col-lg-12 show-all-result">
+   <p class="mb-2">Show all results for 'dentist'</p>
+   </div>
+   </div>
+   <div class="row border-bottom">
+   <div class="col-lg-12">
+   <p class="mb-2">TOP SEARCH RESULTS</p>
+   </div>
+   </div>
+   </div>
+   </div>
+   
+   
+   <div id="suggestion-template" style="display:none">
+   <div class="row search-results">
+   <div class="col-lg-12">
+   <p>Name</p>
+   <a class="mt-0" href="#">
+   Website
+   </a>
+   </div>
+   </div>
+   </div>
+   
+   </div>
+   <div class="col col-lg-2 col-md-2 col-sm-1 col-1">
+   </div>
+   </div>
+   </div>
+</div>
+
+<div class="row justify-content-lg-center">
+    <div class="col-lg-6 col-md-12 col-sm-12 mt-4">
+        <p class="info-gop text-center">
+            From the search results, you will be able to request payment to a provider where direct pay is available by creating a Guarantee
+            of Payment (GOP) document.
+        </p>
+    </div>
+</div>
+
+
+<div class="row mt-5 px-3" id="div-result-container" style="display:none">
+<div class="col-lg-3 refineresult">
+<sly data-sly-resource="${ @path='/etc/designs/expatportal/header', resourceType='expatportal/components/content/refineResult'}" data-sly-unwrap/>
+</div>
+<div class="col-lg-9">
+<sly data-sly-resource="${ @path='/etc/designs/expatportal/header', resourceType='expatportal/components/content/searchResult'}" data-sly-unwrap/>
+<sly data-sly-resource="${ @path='/etc/designs/expatportal/header', resourceType='expatportal/components/content/noResults'}" data-sly-unwrap/>
+</div>
+</div>
+<sly data-sly-resource="${ @path='/etc/designs/expatportal/header', resourceType='expatportal/components/content/providerDetails'}" data-sly-unwrap/>
+
+<script>
+    var loc = document.getElementById('location4');
+    var locationMsg = document.getElementById('location-change-container');
+
+    function locationDisplayMessage() {
+        loc.addEventListener('input', function (event) {
+            if (loc.value.length > 0) {
+                locationMsg.style.display = 'none';
+            } else {
+                locationMsg.style.display = 'block';
+            }
+        });
+    }
+
+ 
+
+
+    // window.onload = locationDisplayMessage(); 
+</script>

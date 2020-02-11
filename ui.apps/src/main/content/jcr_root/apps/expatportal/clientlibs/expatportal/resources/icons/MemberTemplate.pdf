@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://localhost:3002/pages/MemberTemplate.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+
+
+	<!-- Bootstrap4 styles -->
+	<link rel="stylesheet" href="./MemberTemplate_files/bootstrap.min.css">
+	<!-- /Bootstrap4 styles -->
+
+	<!-- Font awesome styles -->
+	<link rel="stylesheet" href="./MemberTemplate_files/font-awesome-4.7.0.min.css">
+	<!-- /Font awesome styles -->
+
+	<!-- main styles -->
+	<link rel="stylesheet" href="./MemberTemplate_files/main.css">
+	<!-- /main styles -->
+	
+</head>
+<body lang="EN-US" style="tab-interval:.5in"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./MemberTemplate_files/browser-sync-client.js.download"></script>
+
+
+
+
+	
+
+
+
+
+	<style>
+		<!--
+		/* Font Definitions */
+
+		@font-face {
+			font-family: Calibri;
+			panose-1: 2 15 5 2 2 2 4 3 2 4;
+			mso-font-charset: 0;
+			mso-generic-font-family: swiss;
+			mso-font-pitch: variable;
+			mso-font-signature: -520092929 1073786111 9 0 415 0;
+		}
+
+		/* Style Definitions */
+
+		p.MsoNormal,
+		li.MsoNormal,
+		div.MsoNormal {
+			mso-style-unhide: no;
+			mso-style-qformat: yes;
+			mso-style-parent: "";
+			margin-top: 0in;
+			margin-right: 0in;
+			margin-bottom: 9.0pt;
+			margin-left: 0in;
+			line-height: 115%;
+			mso-pagination: widow-orphan;
+			font-size: 11.0pt;
+			font-family: "Calibri", "sans-serif";
+			mso-ascii-font-family: Calibri;
+			mso-ascii-theme-font: minor-latin;
+			mso-fareast-font-family: Calibri;
+			mso-fareast-theme-font: minor-latin;
+			mso-hansi-font-family: Calibri;
+			mso-hansi-theme-font: minor-latin;
+			mso-bidi-font-family: "Times New Roman";
+			mso-bidi-theme-font: minor-bidi;
+		}
+
+		p.MsoNoSpacing,
+		li.MsoNoSpacing,
+		div.MsoNoSpacing {
+			mso-style-priority: 1;
+			mso-style-unhide: no;
+			mso-style-qformat: yes;
+			mso-style-parent: "";
+			margin: 0in;
+			margin-bottom: .0001pt;
+			mso-pagination: widow-orphan;
+			font-size: 11.0pt;
+			font-family: "Calibri", "sans-serif";
+			mso-ascii-font-family: Calibri;
+			mso-ascii-theme-font: minor-latin;
+			mso-fareast-font-family: Calibri;
+			mso-fareast-theme-font: minor-latin;
+			mso-hansi-font-family: Calibri;
+			mso-hansi-theme-font: minor-latin;
+			mso-bidi-font-family: "Times New Roman";
+			mso-bidi-theme-font: minor-bidi;
+		}
+
+		span.SpellE {
+			mso-style-name: "";
+			mso-spl-e: yes;
+		}
+
+		span.GramE {
+			mso-style-name: "";
+			mso-gram-e: yes;
+		}
+
+		.MsoChpDefault {
+			mso-style-type: export-only;
+			mso-default-props: yes;
+			mso-ascii-font-family: Calibri;
+			mso-ascii-theme-font: minor-latin;
+			mso-fareast-font-family: Calibri;
+			mso-fareast-theme-font: minor-latin;
+			mso-hansi-font-family: Calibri;
+			mso-hansi-theme-font: minor-latin;
+			mso-bidi-font-family: "Times New Roman";
+			mso-bidi-theme-font: minor-bidi;
+		}
+
+		.MsoPapDefault {
+			mso-style-type: export-only;
+			margin-bottom: 9.0pt;
+			line-height: 115%;
+		}
+
+		@page WordSection1 {
+			size: 11.0in 8.5in;
+			mso-page-orientation: landscape;
+			margin: 1.0in 1.0in 1.0in 1.0in;
+			mso-header-margin: .5in;
+			mso-footer-margin: .5in;
+			mso-paper-source: 0;
+		}
+
+		div.WordSection1 {
+			page: WordSection1;
+		}
+
+		-->
+	</style>
+
+	<table style="display: block;" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+				<td>
+					<span style="text-align:left;font-size:9.0pt">[Header1]</span>
+				</td>
+				<td></td>
+			</tr>
+			<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+				<td>
+					<span style="text-align:left;font-size:9.0pt">[Header2]</span>
+				</td>
+				<td> </td>
+			</tr>
+			<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+				<td>
+					<span style="text-align:left;font-size:9.0pt">[Header3]</span>
+				</td>
+				<td> </td>
+			</tr>
+			<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+				<td>
+					<span style="text-align:left;font-size:9.0pt">[Header4]</span>
+				</td>
+				<td>
+					<span style="font-size:9.0pt;text-align:right;">Date:[Today]</span>
+				</td>
+			</tr>
+			<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+				<td>
+					<span style="text-align:left;font-size:9.0pt">[Header5]</span>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div align="right" class="MsoNoSpacing">
+
+		<p>
+			<span style="font-size:9.0pt;">
+				<b>
+					<u>Member Information</u>
+				</b>
+			</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b>Member: </b>[Member Name]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b>Member ID: </b>[altid]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b>GROUP NAME: </b> [Group Name]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b> GROUP NUMBER: </b> [Group Number]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b>PAYMENT NUMBER: </b> [Check Number]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b> PAYMENT AMOUNT: </b> [Paid Amount]</span>
+			<br>
+			<span style="font-size:9.0pt;">
+				<b> PAYMENT DATE: </b> [Check Date]</span>
+
+		</p>
+
+	</div>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Member Name]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Patient Name]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Address1]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Address2]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Address3]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Address4]
+			<o:p></o:p>
+		</span>
+		<br>
+	</p>
+	<p class="MsoNoSpacing">
+		<span style="font-size:9.0pt">[Address5]
+			<o:p></o:p>
+		</span>
+		<br>
+
+
+	</p>
+	<div align="center" class="MsoNoSpacing">
+		<p class="MsoNoSpacing">
+			<span style="font-size:10.0pt;font-family:Calibri;font:minor-latin;">
+				<b>MEMBER BENEFITS REPRESENTATION</b>
+			</span>
+		</p>
+		<p class="MsoNoSpacing">
+			<span style="font-size:10.0pt;font-family:Calibri;font:minor-latin;">
+				<b>YOU WILL ALSO RECEIVE AN EXPLANATION OF BENEFITS</b>
+			</span>
+		</p>
+		<p class="MsoNoSpacing">
+			<span style="font-size:10.0pt;font-family:Calibri;font:minor-latin;">
+				<b>Claims Summary</b>
+			</span>
+		</p>
+		<p class="MsoNoSpacing">
+			<span style="font-size:10.0pt;font-family:Calibri;font:minor-latin;">
+				<b>Detailed claim information is located on the following pages(s).</b>
+			</span>
+		</p>
+	</div>
+	<div align="left" class="MsoNoSpacing">
+		<p class="MsoNoSpacing">
+			<span style="font-size:9.0pt">
+				<b>Dollar Amount Description</b>
+				<o:p></o:p>
+			</span>
+			<br>
+			</p><table>
+				<tbody>
+					<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+						<th>
+							<b>[TOTCHG]</b>
+						</th>
+						<td>
+							<b>Amount Billed</b>
+							<br>This is the total amount that your provider billed for the services that were provided to you.</td>
+					</tr>
+					<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+						<th>
+							<b>[TOTDSC]</b>
+						</th>
+						<td>
+							<b>Plan Discounts</b>
+							<br>Your plan negotiates discounts with providers to save you money. This amount may also include services that you are
+							not responsible to pay.</td>
+					</tr>
+					<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+						<th>
+							<b>[TOTPLNPD] </b>
+						</th>
+						<td>
+							<b>Your Plan Paid</b>
+							<br>This is the portion of the amount billed that was paid by your plan..</td>
+					</tr>
+					<tr style="font-size:9.0pt;padding:0px;margin: 0px;border-collapse: collapse">
+						<th>
+							<b>[TOTRSP] </b>
+						</th>
+						<td>
+							<b>Total amount you owe the provider(s)</b>
+							<br>The portion of the amount billed you owe the provider(s). This amount does not reflect any payment you may have already
+							made at the time you received care or any amount that may have been paid to you. This amount may include your deductible,
+							co-pay, coinsurance and / or non covered charges. .
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<p></p>
+	</div>
+
+
+
+
+
+
+
+
+		
+			<!-- Bootstrap4 scripts -->
+			<script src="./MemberTemplate_files/jquery-3.2.1.slim.min.js.download"></script>
+			<script src="./MemberTemplate_files/popper-1.12.9.min.js.download"></script>
+			<script src="./MemberTemplate_files/bootstrap.min.js.download"></script>
+			<!-- /Bootstrap4 scripts -->
+		
+		
+			<!-- toolkit scripts -->
+			<script src="./MemberTemplate_files/toolkit.js.download"></script>
+			<!-- /toolkit scripts -->
+
+
+</body></html>

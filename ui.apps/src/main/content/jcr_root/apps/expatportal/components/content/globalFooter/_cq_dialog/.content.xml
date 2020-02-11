@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Footer - Expat Portal"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <navGroupOne
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Navigation Group One "
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Group Title"
+                                name="./groupOneTitle"/>
+                            <iPerceptionsKey
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Iperception Key"
+                                name="./iPerceptionsKey"
+                                required="{Boolean}true"/>
+                            <groupLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Links">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./groupOneLinks">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Link Title"
+                                                    name="./linkTitle"
+                                                    required="{Boolean}true"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Link ( URL )"
+                                                    name="./linkUrl"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/expatportal"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    name="./isExternalLink"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </groupLinks>
+                        </items>
+                    </column>
+                </items>
+            </navGroupOne>
+            <navGroupTwo
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Navigation Group Two "
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Group Title"
+                                name="./groupTwoTitle"/>
+                            <groupLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Navigation Links">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./groupTwoLinks">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Link Title"
+                                                    name="./linkTitle"
+                                                    required="{Boolean}true"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Link ( URL )"
+                                                    name="./linkUrl"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/expatportal"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    name="./isExternalLink"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </groupLinks>
+                        </items>
+                    </column>
+                </items>
+            </navGroupTwo>
+            <basic
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Copyrights"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items
+                            cq:lastReplicated="{Date}2019-07-23T13:56:49.794-05:00"
+                            cq:lastReplicatedBy="nnallani"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured">
+                            <copyrights
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                fieldLabel="Copyrights Text"
+                                name="./copyRightsText"/>
+                            <aboutUsTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="About Us - Link Title"
+                                name="./aboutUsTitle"
+                                required="{Boolean}true"/>
+                            <aboutUsUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="About Us - Link ( URL )"
+                                name="./aboutUsUrl"
+                                required="{Boolean}true"
+                                rootPath="/content/expatportal"/>
+                            <openInNewTabAboutUs
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="About Us Link - Open In New Tab ?"
+                                name="./openInNewTabAboutUs"
+                                text="About Us Link - Open In New Tab ?"
+                                value="{Boolean}true"/>
+                            <isExternalLinkAboutUs
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="About Us - Is External link ?"
+                                name="./isExternalLinkAboutUs"
+                                text="About Us - Is External link ?"
+                                value="{Boolean}true"/>
+                            <assistanceLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Assistance - Link Title"
+                                name="./assistanceLinkTitle"
+                                required="{Boolean}true"/>
+                            <assistanceLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Assistance - Link ( URL )"
+                                name="./assistanceLinkUrl"
+                                required="{Boolean}true"
+                                rootPath="/content/expatportal"/>
+                            <openInNewTabAssistance
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Assistance Link - Open In New Tab ?"
+                                name="./openInNewTabAssistance"
+                                text="Assistance Link - Open In New Tab ?"
+                                value="{Boolean}true"/>
+                            <isExternalLinkAssistance
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Assistance Link - Is External link ?"
+                                name="./isExternalLinkAssistance"
+                                text="Assistance Link - Is External link ?"
+                                value="{Boolean}true"/>
+                            <groupLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Legal Section - Navigation Links">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./copyRightGroupLinks">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Link Title"
+                                                    name="./linkTitle"
+                                                    required="{Boolean}true"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Link ( URL )"
+                                                    name="./linkUrl"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/expatportal"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    name="./isExternalLink"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </groupLinks>
+                        </items>
+                    </column>
+                </items>
+            </basic>
+        </items>
+    </content>
+</jcr:root>

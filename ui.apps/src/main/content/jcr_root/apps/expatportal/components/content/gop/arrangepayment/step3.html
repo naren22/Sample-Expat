@@ -1,0 +1,131 @@
+<div id="step3" style="display:none">
+  <div class="row">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+        <h2 class="provider-service-details-label">${properties.step3mainheading} </h2>
+        <p class="mb-0"> 
+            ${properties.step3subheading}
+            
+        </p>
+  	  </div>
+	</div>
+
+    <div class="row mt-3">
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12 mt-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="mb-0 gop-review-submit-col-title">Provider</p>
+                <a class="gop-review-submit-edit-icon mb-0" href="#" aria-label="Edit Choose Provider">Choose Provider
+                    <span>
+                        <i class="fa fa-pencil"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <hr id="progressLine" class="my-0">
+        <div class="row">
+            <!-- Building Icon for Provider -->
+            <div class="col-lg-12" >
+                <p class="mb-0 gop-provider-title" >
+                    <i class="fa fa-building fa-1x"></i>
+                    <span id="providername">
+
+                    </span>
+
+                </p>
+            </div>
+            <!-- User Icon for Provider -->
+            <!-- <div class="col-lg-12" >
+                <p class="mb-0 gop-provider-title" >
+                    <i class="fa fa-user fa-1x"></i>
+                    <span>
+                        Yashoda Super Speciality Hospital,
+                        Secunderabad
+                    </span>
+
+                </p>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-lg-12 gop-provider-info" >
+                <!-- Address -->
+                <p class="text-values-wrap" id="address">
+
+                </p>
+                <!-- Contact Number -->
+                <p class="text-values-wrap" id="number">
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12 mt-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="mb-0 gop-review-submit-col-title">Service Details</p>
+                <a class="gop-review-submit-edit-icon mb-0" href="#" aria-label="Edit Service Details" onclick="editgop()">Edit
+                    <span>
+                        <i class="fa fa-pencil"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <hr id="progressLine" class="my-0">
+        <div class="row">
+            <div class="col-lg-12" >
+                <p class="mb-0 gop-service-title">
+                    <i class="fa fa-user fa-1x"></i>
+                    <span id="name">
+
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                <p class="font-weight-bold  mb-0">Diagnosis</p>
+            </div> -->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12" >
+                <p class="font-weight-bold  mb-1">Diagnosis / Symptoms</p>
+                <p class="mb-0 text-values-wrap" id="diagnosis">
+
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                <p class="font-weight-bold  mb-0">Services / Procedure</p>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
+                <p class="mb-0 text-values-wrap" id="Procedure" >
+
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                <p class="font-weight-bold  mb-0">Date of Service</p>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                <p class="mb-0 text-values-wrap" id="date">
+
+                </p>
+            </div>
+        </div>
+    </div>
+	</div>
+
+  <hr id="lineBtn">
+
+  <div class="row ">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-right  mt-2 gop-button-forms">
+        <!-- <button type="button" class="btn btn-danger" onclick="closeChangeLocation()">CANCEL</button> -->
+        <button class="btn btn-danger" onclick="cancelGopSubmit()" arial-label="Cancel">Cancel</button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-left mt-2 gop-button-forms">
+        <button id="submit-gop-info-btn" class="btn btn-primary" onclick="submitReviewGopForm()" arial-label="Submit Request">Submit Request</button>
+        <!-- <button type="button" class="btn btn-primary">CHANGE TO THIS LOCATION</button> -->
+    </div>
+
+</div>
+
+</div>

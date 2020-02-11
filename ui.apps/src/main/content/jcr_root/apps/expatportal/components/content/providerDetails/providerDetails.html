@@ -1,0 +1,94 @@
+<div class="container k-content" id="provider-details-container"
+	style="display: none">
+
+</div>
+
+
+<div id="provider-detail-template" style="display: none"">
+	<main>
+	<div class="row">
+	</div>
+
+	<div class="row mx-2 mt-3">
+		<div class="header-text">
+			<h1>
+				<a href="#" id="btnBackToResults" style="display:none"><i
+					class="fa fa-chevron-circle-left mr-1"></i>RETURN TO SEARCH RESULTS</a>
+				<a href="#" id="btnBackToSearch" style="display:none"><i
+					class="fa fa-chevron-circle-left mr-1"></i>RETURN TO SEARCH</a>
+			</h1>
+		</div>
+	</div>
+	<hr>
+
+	<div class="row">
+        <div class="col-xs-2 user-icon" style="display:none">
+			<span> <i class="fa fa-user fa-4x"></i>
+			</span>
+		</div>
+
+        <div class="col-xs-2 facility-icon" style="display:none">
+        <span>
+            <i class="fa fa-building fa-4x mt-2"></i>
+        </span>
+    	</div>
+
+		<div class="col-lg-10 user-name facility-name">
+			<h3></h3>
+		</div>
+	</div>
+
+	<p id="overviewHeader">OVERVIEW</p>
+
+	<hr id="overviewLine">
+
+	<div class="row overview">
+		<div class="col-md-2 specialty">
+			<p id="overviewTxt">SPECIALTY</p>
+			<ul class="specialties">
+			</ul>
+		</div>
+		<div class="col-md-2 address">
+			<p id="overviewTxt">ADDRESS</p>
+			<a href="" class="addressSection">
+			<p>
+
+				</p></a>
+			<p id="distanceDetails"></p>
+			<div class="facility">
+				<p id="facility">FACILITY</p>
+				<p class="facilityText"></p>
+			</div>
+		</div>
+		<div class="col-md-2 contact">
+			<p id="overviewTxt">PHONE</p>
+            
+            <a href="" class="phoneLink"></a>
+
+			<div class="website">
+				<p id="website">WEBSITE</p>
+				<a href="" class="emailLink"></a>
+			</div>
+		</div>
+		<div class="col-md-6 state-info">
+			<ul>
+                <li class="speaksEnglishDetails" style="display:none"><i class="fa fa-check-circle"></i> Speaks English</li>
+                    <li class="directPayDetails" style="display:none"><span
+					title="Direct Pay Available indicates that UnitedHealthcare Global has an agreement with this provider to bill UnitedHealthcare Global directly for your health benefits. If you experience difficulty with this, please ask the provider to contact us using the phone number on the back of your member ID card."
+					onclick="openDirectPayNote()" class="direct-pay-note"> <i
+						class="fa fa-info-circle "></i> Direct Pay Available
+				</span></li>
+			</ul>
+		</div>
+	</div>
+	</main>
+</div>
+<!-- International Provider JS Cdes -->
+<script>
+		function openDirectPayNote() {
+			document.getElementById("direct-pay-note").style.display = "block";
+		}
+		function closeDirectPayNote() {
+			document.getElementById("direct-pay-note").style.display = "none";
+		}
+</script>

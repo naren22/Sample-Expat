@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/expatportal/settings/wcm/templates/.*]"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2019-11-27T15:16:29.716-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-09-17T08:55:26.452-04:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="expatportal Site"
+        jcr:uuid="f19fb230-f294-46ce-9881-36c140d86a92"
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="{Long}302"
+        sling:resourceType="expatportal/components/structure/homepage"
+        redirectTarget="/content/expatportal">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+        <iParHeader
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys">
+            <header
+                jcr:lastModified="{Date}2019-11-27T15:16:29.687-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/header"
+                accountSettingLink="https://stage-portal.uhcglobal.com/Member/Login"
+                accountSettingProfileText="account/profile"
+                accountSettingText="ACCCOUNT SETTINGS"
+                external="{Boolean}false"
+                external1="{Boolean}true"
+                external2="true"
+                external5="true"
+                external6="true"
+                helpText="help"
+                helpTextLink="https://test3.myuhc.com/content/myuhc/en/secure/help.html"
+                logoAltText="logo"
+                logoImage="/content/dam/expatportal/_logo-uhcg.png"
+                logoLink="https://stage-portal.uhcglobal.com/Member/Login"
+                logoutLink="https://stage-portal.uhcglobal.com/Member/Login"
+                logoutText="Logout"
+                menuLinkTitle1="Home"
+                menuLinkTitle2="Find Care"
+                menuLinkTitle3="Claims"
+                menuLinkTitle4="Coverage &amp; Benefits"
+                menuLinkTitle5="healthresoureces;klgk"
+                menuLinkUrl1="https://dev-portal-uhcglobal.uhc.com/Member/Login"
+                menuLinkUrl4="https://stage-portal.uhcglobal.com/Member/ViewBenefits"
+                menuLinkUrl5="/content/expatportal/coverage&amp;benefits">
+                <links2 jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkTitle="Find an International Provider"
+                        linkUrl="/content/expatportal/findcare/find-an-international-provider.html"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        external="true"
+                        linkTitle="Request Guarantee of Payment"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToRequestGop"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        external="true"
+                        linkTitle="View Past Guarantees of Payment"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToReviewGop"/>
+                </links2>
+                <links3 jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        external="{Boolean}true"
+                        linkTitle="SUBMIT NEW CLAIMS"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GotoSubmitClaim"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        external="{Boolean}true"
+                        linkTitle="VIEW PAST CLAIMS"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToViewClaims"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        external="{Boolean}true"
+                        linkTitle="DOWNLOAD CLAIMS FORMS"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToClaimFormList"/>
+                </links3>
+            </header>
+        </iParHeader>
+        <iParFooter
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys">
+            <globalfooter
+                jcr:created="{Date}2019-07-20T11:16:25.160-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-10-30T11:42:19.992-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="expatportal/components/content/globalFooter"
+                aboutUsTitle="About UnitedHealthcare"
+                aboutUsUrl="https://www.myuhc.com/member/preLoginCompanyInfoLayout.do?psnName=link.nav.footer.companyinfo.prelogin&amp;requestor=/footerPreLogin"
+                assistanceLinkTitle="Language Assistance / Non-Discrimination Notice"
+                assistanceLinkUrl="https://www.uhc.com/legal/nondiscrimination-and-language-assistance-notices"
+                copyRightsText="UnitedHealth Group, Inc. All rights reserved"
+                groupOneTitle="Member Support"
+                groupTwoTitle="Quick Links"
+                iPerceptionsKey="ef6177e6-a195-4fc1-9b32-7636466e19b5"
+                openInNewTabAboutUs="true"
+                openInNewTabAssistance="true">
+                <groupOneLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkTitle="Share Feedback"
+                        linkUrl="javascript:iperceptions_127146.ipeCC()"
+                        openInNewTab="true"/>
+                </groupOneLinks>
+                <groupTwoLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        isExternalLink="true"
+                        linkTitle="Account Settings"
+                        linkUrl="https://stage-portal.uhcglobal.com/Member/GoToViewProfile"
+                        openInNewTab="true"/>
+                </groupTwoLinks>
+                <copyRightGroupLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkTitle="Terms and Conditions"
+                        linkUrl="https://www.uhc.com/privacy/terms-of-use"
+                        openInNewTab="true"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        linkTitle="Website Privacy Notice"
+                        linkUrl="https://www.uhc.com/privacy#website"
+                        openInNewTab="true"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        isExternalLink="true"
+                        linkTitle="Browser Preferences"
+                        linkUrl="/content/expatportal/browser-preference.external.html"/>
+                </copyRightGroupLinks>
+            </globalfooter>
+        </iParFooter>
+    </jcr:content>
+    <homepage/>
+    <findcare/>
+    <claims/>
+    <contact-us/>
+    <browser-preference/>
+    <sso-dummy/>
+    <contactsettings/>
+    <preference/>
+</jcr:root>

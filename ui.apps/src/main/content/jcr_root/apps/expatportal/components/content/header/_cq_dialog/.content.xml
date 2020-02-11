@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Main"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <logoImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Enter logo Image Path. Mandatory"
+                                fieldLabel="Logo"
+                                name="./logoImage"/>
+                            <logoLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Target link for logo . Must start with http:// or https://."
+                                fieldLabel="Provide the link for logo "
+                                name="./logoLink"
+                                rootPath="/content/expatportal"/>
+                            <logoAltText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter Logo Alt Text [Max - 30]"
+                                fieldLabel="Logo1 Alt Text"
+                                maxLength="30"
+                                name="./logoAltText"/>
+                            <accountSettingText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter account setting text"
+                                fieldLabel="Account setting text"
+                                maxLength="50"
+                                name="./accountSettingText"/>
+                            <accountSettingLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Target link for account setting . Must start with http:// or https://."
+                                fieldLabel="Provide the link for account setting"
+                                name="./accountSettingLink"
+                                rootPath="/content"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external1"
+                                name="./external1"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                            <accountSettingProfileText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter Account Setting/Profile text"
+                                fieldLabel="Account Setting/Profile Text"
+                                name="./accountSettingProfileText"/>
+                            <logoutText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter logout Text"
+                                fieldLabel="logout Text"
+                                name="./logoutText"/>
+                            <logoutLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Enter logout link"
+                                fieldLabel="Logout link"
+                                name="./logoutLink"/>
+							 <helpText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter Help Text"
+                                fieldLabel="Help Text"
+                                name="./helpText"/>
+                            <helpTextLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Help text link"
+                                fieldLabel="Help text link"
+                                name="./helpTextLink"/>
+							<externalHelp
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External Help link ?"
+                                key="externalHelp"
+                                name="./externalHelp"
+                                text="Is External Help link?"
+                                value="{Boolean}true"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Menu 1"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="This is Menu Title. Mandatory. Max Limit - 30"
+                                fieldLabel="Enter Menu Link Title"
+                                key="menuLinkTitle1"
+                                maxlength="50"
+                                name="./menuLinkTitle1"/>
+                            <menuLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="This is Menu Link. Must start with http:// or https://. Mandatory"
+                                fieldLabel="Enter Menu Link Url"
+                                key="menuLinkUrl1"
+                                name="./menuLinkUrl1"
+                                rootPath="/content/expatportal"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external2"
+                                name="./external2"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="Configure Submenu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./links1">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This is Sub Menu Title. Mandatory. Max Limit - 30"
+                                                    fieldLabel="Enter Sub Menu Title"
+                                                    key="linkTitle"
+                                                    maxlength="50"
+                                                    name="./linkTitle"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="This is Sub Menu link. Must start with http:// or https://. Mandatory"
+                                                    fieldLabel="Enter Sub Menu Link"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternal
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    key="external"
+                                                    name="./external"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalTH
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                    name="./external@TypeHint"
+                                                    value="Boolean"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Menu 2"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="This is Menu Title. Mandatory. Max Limit - 30"
+                                fieldLabel="Enter Menu Link Title"
+                                key="menuLinkTitle2"
+                                maxlength="50"
+                                name="./menuLinkTitle2"/>
+                            <menuLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="This is Menu Link. Must start with http:// or https://. Mandatory"
+                                fieldLabel="Enter Menu Link Url"
+                                key="menuLinkUrl2"
+                                name="./menuLinkUrl2"
+                                rootPath="/content/expatportal"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external3"
+                                name="./external3"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="Configure Submenu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./links2">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This is Sub Menu Title. Mandatory. Max Limit - 30"
+                                                    fieldLabel="Enter Sub Menu Title"
+                                                    key="linkTitle"
+                                                    maxlength="50"
+                                                    name="./linkTitle"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="This is Sub Menu link. Must start with http:// or https://. Mandatory"
+                                                    fieldLabel="Enter Sub Menu Link"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternal
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    key="external"
+                                                    name="./external"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    key="openInNewTab"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Menu 3"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="This is Menu Title. Mandatory. Max Limit - 30"
+                                fieldLabel="Enter Menu Link Title"
+                                key="menuLinkTitle3"
+                                maxlength="50"
+                                name="./menuLinkTitle3"/>
+                            <menuLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="This is Menu Link. Must start with http:// or https://. Mandatory"
+                                fieldLabel="Enter Menu Link Url"
+                                key="menuLinkUrl3"
+                                name="./menuLinkUrl3"
+                                rootPath="/content/expatportal"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external4"
+                                name="./external4"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="Configure Submenu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./links3">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This is Sub Menu Title. Mandatory. Max Limit - 30"
+                                                    fieldLabel="Enter Sub Menu Title"
+                                                    key="linkTitle"
+                                                    maxlength="50"
+                                                    name="./linkTitle"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="This is Sub Menu link. Must start with http:// or https://. Mandatory"
+                                                    fieldLabel="Enter Sub Menu Link"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternal
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    key="external"
+                                                    name="./external"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalTH
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                    name="./external@TypeHint"
+                                                    value="Boolean"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    key="openInNewTab"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab4>
+            <tab5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Menu 4"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="This is Menu Title. Mandatory. Max Limit - 30"
+                                fieldLabel="Enter Menu Link Title"
+                                key="menuLinkTitle4"
+                                maxlength="50"
+                                name="./menuLinkTitle4"
+                                required="{Boolean}false"/>
+                            <menuLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="This is Menu Link. Must start with http:// or https://. Mandatory"
+                                fieldLabel="Enter Menu Link Url"
+                                key="menuLinkUrl4"
+                                name="./menuLinkUrl4"
+                                required="{Boolean}false"
+                                rootPath="/content/expatportal"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external5"
+                                name="./external5"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="Configure Submenu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./links4">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This is Sub Menu Title. Mandatory. Max Limit - 30"
+                                                    fieldLabel="Enter Sub Menu Title"
+                                                    key="linkTitle"
+                                                    maxlength="50"
+                                                    name="./linkTitle"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="This is Sub Menu link. Must start with http:// or https://. Mandatory"
+                                                    fieldLabel="Enter Sub Menu Link"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternal
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    key="external"
+                                                    name="./external"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalTH
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                    name="./external@TypeHint"
+                                                    value="Boolean"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    key="openInNewTab"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab5>
+            <tab6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Menu 5"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuLinkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="This is Menu Title. Mandatory. Max Limit - 30"
+                                fieldLabel="Enter Menu Link Title"
+                                key="menuLinkTitle5"
+                                maxlength="50"
+                                name="./menuLinkTitle5"/>
+                            <menuLinkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="This is Menu Link. Must start with http:// or https://. Mandatory"
+                                fieldLabel="Enter Menu Link Url"
+                                name="./menuLinkUrl5"
+                                rootPath="/content/expatportal"/>
+                            <isExternal
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                fieldLabel="Is External link ?"
+                                key="external6"
+                                name="./external6"
+                                text="Is External link?"
+                                value="{Boolean}true"/>
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="Configure Submenu">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./links5">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This is Sub Menu Title. Mandatory. Max Limit - 30"
+                                                    fieldLabel="Enter Sub Menu Title"
+                                                    key="linkTitle"
+                                                    maxlength="50"
+                                                    name="./linkTitle"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="This is Sub Menu link. Must start with http:// or https://. Mandatory"
+                                                    fieldLabel="Enter Sub Menu Link"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternal
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    key="external"
+                                                    name="./external"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <isExternalTH
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                    name="./external@TypeHint"
+                                                    value="Boolean"/>
+                                                <openInNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldLabel="Open In New Tab ?"
+                                                    key="openInNewTab"
+                                                    name="./openInNewTab"
+                                                    text="Open In New Tab ?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                            <isExternalTH
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./external1@TypeHint"
+                                value="Boolean"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab6>
+        </items>
+    </content>
+</jcr:root>

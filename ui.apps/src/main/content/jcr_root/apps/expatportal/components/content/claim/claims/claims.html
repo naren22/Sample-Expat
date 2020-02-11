@@ -1,0 +1,259 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='expatportal.claims'}"/>
+
+
+<div class="container k-content">
+<main>
+				
+<!-- Start of first component -->
+<div class="row">
+    <div id="cancel-claim">
+        <div id="cancel-claim-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+
+                        <h3 class="mb-0">Cancel Claim Submission?</h3>
+
+                        
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                            <button class="btn modal-close" onclick="closeClaim()"></button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+
+                    <div class="col text-left">
+
+                        <p class="m-0">Are you sure you want to cancel your claim submission?</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center cancel-claim-button">
+                        <button type="button" class="btn btn-danger" onclick="cancelClaimNotif()">YES, CONTINUE AND LOSE CLAIM DATA</button>
+                        <button type="button" class="btn btn-primary px-3" onclick="closeClaim()">NO, TAKE ME BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div id="warning-message-submit-claim">
+        <div id="warning-message-submit-claim-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+                        <h3 class="mb-0">Cancel Claim Submission?</h3>
+                        
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                            <button class="btn modal-close" onclick="hideMenuWarning()"></button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+
+                    <div class="col text-left">
+
+                        <p class="m-0">Opening this page will cancel the submission process and you will lose all information entered. Are you sure?</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center warning-message-submit-claim-button">
+                        <button type="button" class="btn btn-danger" onclick="gotoUrlMenuWarning()">YES, CONTINUE AND LOSE CLAIM DATA</button>
+                        <button type="button" class="btn btn-primary px-3" onclick="hideMenuWarning()">NO, TAKE ME BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+<div class="row">
+    <div id="system-error-note" class="submit-claim-modal">
+
+		<div class="submit-claim-modal-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-8 mt-4 text-left">
+						<h3 class="mb-0">Oops...something went wrong.</h3>
+					</div>
+					<div class="col-lg-4 col-4 mt-2 text-right close-mark">
+						<button class="btn modal-close" onclick="closeSystemErrorNote()"></button>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col text-left">
+						<p class="m-0">An unexpected error has occurred. Please try again. If the error persists, please contact us.</p>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col text-center submit-claim-modal-button">
+						<button type="button" class="btn btn-primary px-3"
+							onclick="closeSystemErrorNote()">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    
+    <div id="system-error-note-loader" class="submit-claim-loader">
+        <div class="submit-claim-loader-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+                        <div class="submit-claim-loader-animation">
+    
+                        </div>
+                        <!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+<div class="row">
+    <div id="provider-note">
+        <div id="provider-note-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-6 text-left">
+                        <h3 class="">
+                            Provider
+                        </h3>
+                    </div>
+                    <div class="col-lg-6 col-6 text-right">
+                        <button class="modal-close" onclick="closeProviderNote()"></button>
+                        <!-- <h3 class="mb-0">
+                            <i onclick="closeProviderNote()" class="fa fa-times location-close"></i>
+                        </h3> -->
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="mb-5">Please enter the name of the provider who rendered the services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mx-4">
+   <sly data-sly-resource="${@path='progressBar', resourceType='/apps/expatportal/components/content/claim/progressBar'}" />
+</div>
+<!-- end of first component -->
+<div class="mx-4 row minorPopUp justify-content-md-center" style="display:none">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-12 mt-4">
+        <p class="mb-0">
+            We are unable to accept your claim because the subscriber on your policy does not have a reimbursement preference on file. Please ask the subscriber to log on to myuhc.com and enter their claim reimbursement preference under Account Settings. You, or the subscriber, may then submit your claim.
+        </p>
+        <button type="button" class="btn btn-danger btn-full-width mt-3" onclick="takeMeHome()">CANCEL CLAIM SUBMISSION</button>
+    </div>
+</div>
+<!-- Start of second component -->
+
+ <div class="mx-4" id="claim-submit-flow" style="displaye:none;">
+
+	<!--//<sly data-sly-resource="${@path='claimInfo', resourceType='/apps/expatportal/components/content/claim/claimInfo'}" />//-->
+    <sly data-sly-resource="${ @path='par', resourceType='foundation/components/parsys'}" data-sly-unwrap/>
+</div>
+
+<!-- end of second component -->
+
+<!-- Submit Claims JS Cdes -->
+<script>
+	function openProviderNote() {
+        document.getElementById("provider-note").style.display = "block";
+    }
+
+    function closeProviderNote() {
+        document.getElementById("provider-note").style.display = "none";
+    }
+
+
+
+    function diagnosisTextCtr(str) {
+        var lng = str.length;
+        document.getElementById("charDiagnosisLimit").innerHTML = 150 - lng;
+    }
+
+    function treatmentTextTextCtr(str) {
+        var lng = str.length;
+        document.getElementById("charTreatmentLimit").innerHTML = 250 - lng;
+    }
+
+    function init() {
+        diagnosisTextCtr(document.getElementById("diagnosisText").value);
+        treatmentTextTextCtr(document.getElementById("treatmentText").value);
+
+    }
+    window.onload = init;
+</script>
+
+
+<!-- Displaying the datepicker for date of service -->
+<script>
+    var date = document.getElementById('dateOfService');
+
+    function checkValue(str, max) {
+        if (str.charAt(0) !== '0' || str == '00') {
+            var num = parseInt(str);
+            if (isNaN(num) || num <= 0 || num > max) num = 1;
+            str = num > parseInt(max.toString().charAt(0)) &&
+                num.toString().length == 1 ? '0' + num : num.toString();
+        };
+        return str;
+    };
+
+    date.addEventListener('input', function (e) {
+        this.type = 'text';
+        var input = this.value;
+        if (/\D\-$/.test(input)) {
+            input = input.substr(0, input.length - 3);
+        }
+        var values = input.split('-').map(function (v) {
+            console.log("value", v);
+            return v.replace(/\D/g, '')
+        });
+        if (values[0]) values[0] = checkValue(values[0], 31);
+        if (values[1]) values[1] = checkValue(values[1], 12);
+
+        var output = values.map(function (v, i) {
+            return v.length == 2 && i < 2 ? v + ' - ' : v;
+        });
+        this.value = output.join('').substr(0, 14);
+    });
+</script>
+
+<!-- Provide country if choose US display a note -->
+<script>
+    var providerCountry = document.getElementById('providerCountry');
+        providerCountry.addEventListener('input', function (e) {
+        this.type = 'text';
+        var input = this.value;
+        // console.log("country", input);
+
+        if (input.toUpperCase() === 'UNITED STATES') {
+
+            document.getElementById('country-note').style.display = 'block';
+        } else {
+            document.getElementById('country-note').style.display = 'none';
+        }
+    });
+      		
+    	//_satellite.track(' trackClaimSubmitPageLoad ');
+  
+
+</script>
+	</main>
+
+
+
+
+</div>
+<sly data-sly-call="${clientlib.js @ categories='expatportal.claims'}"/>

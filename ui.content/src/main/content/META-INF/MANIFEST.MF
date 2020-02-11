@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Content-Package-Roots: /content/dam/expatportal,/conf/expatportal,/con
+ tent/expatportal
+Content-Package-Type: content
+Content-Package-Id: com.mycompany.myproject:expatportal.ui.content:0.0
+ .1-SNAPSHOT
+Content-Package-Description: UI content package for expatportal
+

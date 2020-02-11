@@ -1,0 +1,5 @@
+#base=js
+external.js
+sessionmanager.js
+memberdatasessionstorage.js
+

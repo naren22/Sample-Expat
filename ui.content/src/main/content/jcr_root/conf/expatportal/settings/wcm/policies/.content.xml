@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <content-default
+                        jcr:description="Policy for editable layout containers"
+                        jcr:lastModified="{Date}2019-02-03T12:30:16.451-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="expatportal Site Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:expatportal Components,/apps/expatportal/components/form/container]"
+                        policyResourceType="wcm/foundation/components/responsivegrid">
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="expatportal/components/content/image"
+                                    type="Images"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                        <jcr:content
+                            cq:lastReplicated="{Date}2019-02-04T16:08:59.794-05:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </content-default>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <expatportal jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <form-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="expatportal Site Form"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/expatportal/components/form/button,/apps/expatportal/components/form/hidden,/apps/expatportal/components/form/options,/apps/expatportal/components/form/text]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2019-02-04T16:08:59.794-05:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </form-container>
+                </container>
+            </form>
+            <content jcr:primaryType="nt:unstructured">
+                <title jcr:primaryType="nt:unstructured"/>
+            </content>
+            <structure jcr:primaryType="nt:unstructured">
+                <page jcr:primaryType="nt:unstructured"/>
+                <homepage jcr:primaryType="nt:unstructured"/>
+            </structure>
+        </components>
+    </expatportal>
+    <policy_1549904227916
+        jcr:lastModified="{Date}2019-02-11T11:58:15.893-05:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Home page"
+        sling:resourceType="wcm/core/components/policy/policy"
+        help="help"
+        signIn="sign in">
+        <jcr:content jcr:primaryType="nt:unstructured"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileName="logo-uhcg.png"/>
+    </policy_1549904227916>
+    <policy_79932327677400 jcr:primaryType="nt:base"/>
+    <policy_1549904747912
+        jcr:lastModified="{Date}2019-02-11T12:07:38.139-05:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Home page"
+        sling:resourceType="wcm/core/components/policy/policy"
+        help="help"
+        logo="/content/dam/expatportal/asset.jpg"
+        signIn="sign in">
+        <jcr:content
+            cq:lastReplicated="{Date}2019-06-21T10:44:26.583-04:00"
+            cq:lastReplicatedBy="admin"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"/>
+    </policy_1549904747912>
+    <policy_1561128205035
+        jcr:lastModified="{Date}2019-06-21T10:44:14.583-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="expat-home"
+        sling:resourceType="wcm/core/components/policy/policy"
+        components="[group:General,group:expatportal]">
+        <jcr:content
+            cq:lastReplicated="{Date}2019-06-21T10:44:26.583-04:00"
+            cq:lastReplicatedBy="admin"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"/>
+        <section jcr:primaryType="nt:unstructured"/>
+    </policy_1561128205035>
+    <foundation jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <parsys jcr:primaryType="nt:unstructured"/>
+        </components>
+    </foundation>
+    <policy_1562254264908
+        jcr:lastModified="{Date}2019-07-04T11:32:21.519-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="par_policy"
+        sling:resourceType="wcm/core/components/policy/policy"
+        components="[group:expatportal,group:expatportal ]">
+        <jcr:content
+            cq:lastReplicated="{Date}2019-09-17T08:15:32.001-04:00"
+            cq:lastReplicatedBy="admin"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"/>
+        <section jcr:primaryType="nt:unstructured"/>
+    </policy_1562254264908>
+    <policy_1564976781931
+        jcr:lastModified="{Date}2019-08-04T23:48:05.332-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="viewclaims"
+        sling:resourceType="wcm/core/components/policy/policy"
+        components="[group:General,group:expatportal]">
+        <jcr:content
+            cq:lastReplicated="{Date}2019-09-17T08:15:32.001-04:00"
+            cq:lastReplicatedBy="admin"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"/>
+        <section jcr:primaryType="nt:unstructured"/>
+    </policy_1564976781931>
+</jcr:root>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2019-04-26T16:48:57.552Z"
+    jcr:createdBy="nnallani"
+    jcr:description="UI content package for expatportal"
+    jcr:lastModified="{Date}2019-04-26T16:48:57.552Z"
+    jcr:lastModifiedBy="nnallani"
+    jcr:primaryType="vlt:PackageDefinition"
+    acHandling="merge_preserve"
+    buildCount="2"
+    group="com.mycompany.myproject"
+    lastUnwrapped="{Date}2019-04-26T16:48:57.552Z"
+    lastUnwrappedBy="nnallani"
+    lastWrapped="{Date}2019-04-26T16:48:57.552Z"
+    lastWrappedBy="nnallani"
+    name="expatportal.ui.content"
+    requiresRestart="{Boolean}false"
+    requiresRoot="{Boolean}false"
+    version="0.0.1-SNAPSHOT">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="merge"
+            root="/conf/expatportal"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="merge"
+            root="/content/expatportal"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="merge"
+            root="/content/dam/expatportal"
+            rules="[]"/>
+    </filter>
+</jcr:root>

@@ -1,0 +1,87 @@
+
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder section" data-emptytext="Bottom Buttons Component"></div> 
+
+<sly data-sly-use.data="bottom-buttons-use.js">
+
+<section class="promo pb-4 pt-4">
+            <div class="container mb-4 mt-4">
+                <div class="row" style="width : 100%;">
+                    <div id="bottomLinks-first-container" class="card-wrapper col-12 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+
+								<div id="bottomLinks-default-first" data-isExternalLink="${properties.isExternalLink1}" class="image-container bottom-button-entry">
+									<a target="_blank" href="${properties.cardLink1}">
+                                        <img src="${properties.fileReference1}">
+                                    </a>
+                                </div>
+
+
+								<sly data-sly-list="${data.listOne.listChildren}">
+                                <div data-groupID="${item.groupID}" data-isExternalLink="${item.isExternalLink}" class="image-container bottom-button-entry">
+									<a target="_blank" href="${item.linkUrl}">
+                                      <img src="${properties.fileReference1}">
+                                    </a>
+                                </div>
+                                </sly>
+
+                                <h3 class="promo-title mt-2">${properties.cardTitle1}</h3>
+                                <p>${properties.cardDescription1}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bottomLinks-centre-container" class="card-wrapper col-12 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+
+								<div id="bottomLinks-default-centre" data-isExternalLink="${item.isExternalLink2}" class="image-container bottom-button-entry">
+									<a href="${properties.defaultLink}">
+                                   <img src="${properties.fileReference2}">
+                                    </a>
+                                </div>
+
+
+								<sly data-sly-list="${data.listTwo.listChildren}">
+                                <div data-groupID="${item.groupID}" data-isExternalLink="${item.isExternalLink}" class="image-container bottom-button-entry">
+									<a href="${item.linkUrl}">
+                                      <img src="${properties.fileReference2}">
+                                    </a>
+                                </div>
+								</sly>
+
+
+                                <h3 class="promo-title mt-2">${properties.cardTitle2}</h3>
+                                <p>${properties.cardDescription2}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bottomLinks-last-container" class="card-wrapper col-12 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+
+
+                            	<div id="bottomLinks-default-last" data-isExternalLink="${properties.isExternalLink3}" class="image-container bottom-button-entry">
+									<a href="${properties.cardLink3}">
+                                        <img src="${properties.fileReference3}">
+                                    </a>
+                                </div>
+
+								<sly data-sly-list="${data.listThree.listChildren}">
+                                <div data-groupID="${item.groupID}" data-isExternalLink="${item.isExternalLink}" class="image-container bottom-button-entry">
+									<a href="${item.linkUrl}">
+                                      <img src="${properties.fileReference2}">
+                                    </a>
+                                </div>
+                                </sly>
+
+                                <h3 class="promo-title mt-2">${properties.cardTitle3}</h3>
+                                <p>${properties.cardDescription3}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+</sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='expatportal.bottomButtons'}"/>

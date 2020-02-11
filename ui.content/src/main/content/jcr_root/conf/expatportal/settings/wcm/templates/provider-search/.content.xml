@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-25T22:04:44.114-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-02-04T16:08:59.794-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:templateType="/conf/expatportal/settings/wcm/template-types/provider-search"
+        jcr:description="Simple provider page for expatportal Site"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Provider Search"
+        status="enabled"/>
+</jcr:root>

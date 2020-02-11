@@ -1,0 +1,50 @@
+<sly
+	data-sly-use.dashboard="com.expatportal.core.models.component.DashboardComponent" />
+<section class="dashboard row">
+<div id="hiddenMessages" data-sly-list.child="${dashboard.rotatingMessages.listChildren}"
+		style="display:none">
+		<div id="${child.clientId}">
+			<span>${child.message1}</span>
+			<span>${child.message2}</span>
+			<span>${child.message3}</span>
+		</div>
+ </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <h1 class="mb-0 pt-4 memberWelcomeMessage" style="display:none">
+                    ${properties.welcomeText @ context='html'}
+                </h1>
+                <div class="col-lg-8 carousel-text" id="rotatingText"  title="Click to stop the message.">
+
+                </div>
+                <hr id="rotatingLine">
+                <p class="medical-info mt-4">
+               <span id="medicalMemberIdText" style="display:none"> ${properties.medicalMemberIdText} </span>
+                    <b><span id="medicalMemberId"></span> </b>
+                    <span id="rxMemberIdText" style="display:none"><b></b>${properties.rxMemberIdText} </span>
+                    <b><span id="rxMemberId" ></span> </b>
+                    <span id="dentalMemberIdText" style="display:none"><b></b>${properties.dentalMemberIdText} </span>
+                    <b><span id="dentalMemberId" ></span> </b> 
+                    <span id="visionMemberIdText" style="display:none"><b></b>${properties.visionMemberIdText} </span>
+                    <b><span id="visionMemberId" ></span> </b>
+        
+                </p>
+            </div>
+ </section>
+<div id="system-error-note-loader" class="submit-claim-loader">
+        <div class="submit-claim-loader-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+                        <div class="submit-claim-loader-animation">
+    
+                        </div>
+                        <!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='expatportal.dashboard'}" />

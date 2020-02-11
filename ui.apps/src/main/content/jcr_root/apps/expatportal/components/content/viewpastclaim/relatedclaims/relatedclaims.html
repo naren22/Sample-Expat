@@ -1,0 +1,124 @@
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='expatportal.relatedclaims'}"/>
+
+ <hr id="progressLine">
+    <h4>RELATED CLAIMS</h4>
+    <!--Start of Card -->
+    <div id="relatedPaymentContainer" style="display:none">
+    	
+    </div>
+	 <div class="col-lg-12" id="pagination-related-claim" style="display:none">
+            <div class="controls-pagination text-right">
+                <span class="description" id="relatedClaims"></span>
+                <button class="btn btn-outline-primary page-prev" id="prev" aria-disabled="true" disabled="disabled">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-outline-primary page-next" id="next" aria-disabled="true" >
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    <div id="related-payment-cards-container-template" style="display:none">
+    <div class="view-claim-cards-container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row mb-2">
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-12 mb-2 provider-card-icon">
+                        <div class="icon-container-rounded status">
+                            <i class="fa fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 view-claim-name">
+                         <h4 id="claimStatus"></h4>
+                        <p id="userClaim"></p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 view-claim-desc">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row mb-3 view-clinic">
+                    <h6>
+                        <i class="fa fa-plus-circle mr-2 fa-2x"></i>
+                        <span></span>
+                    </h6>
+                </div>
+                <div class="row claim-details">
+                    <div class="col-lg-6 col-md-6 mb-2 view-claim-info">
+                        <div id="claimidRow" class="row">
+                            <div class="col-lg-5 col-md-5">
+                                <p>Claim ID</p>
+                            </div>
+                            <div class="col-lg-7 col-md-7 view-claim-values view-claim-id">
+                                <p id = "claimid"></p>
+                            </div>
+                        </div>
+                        <div  id="dateOfServiceRow" class="row">
+                            <div class="col-lg-5 col-md-5">
+                                <p>Date of Service</p>
+                            </div>
+                            <div class="col-lg-7 col-md-7 view-claim-values view-claim-service-date">
+                                <p id="dateOfService"></p>
+                            </div>
+                        </div>
+                        <div id="processDateRow" class="row">
+                            <div class="col-lg-5 col-md-5">
+                                <p>Processed</p>
+                            </div>
+                            <div class="col-lg-7 col-md-7 view-claim-values view-claim-processeddate">
+                                <p id="processDate" ></p>
+                            </div>
+                        </div>
+                        <div id="view-claim-submissionid-row" class="row">
+                            <div class="col-lg-5 col-md-5">
+                                <p>Submission ID</p>
+                            </div>
+                            <div class="col-lg-7 col-md-7 view-claim-values view-claim-submissionid">
+                                <p id = "view-claim-submissionvalue"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 amount-billed-details">
+                        <div class="col-lg-12 col-md-12">
+
+                            <p>Amount Billed</p>
+                            <p id="amount-relatedclaims-billed"></p>
+                            <p id="currency-relatedclaims-billed">r</p>
+                            <p id="dollar-relatedclaims-billed"></p>
+                        </div>
+                        <div class="col-lg-12 mb-2">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <p>Pay To</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 view-claim-values view-claim-member">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 amount-paid-details">
+                        <div id="amountPaid">
+                        <p>Amount Paid</p>
+                        <p id="amount-relatedclaims-paid"></p>
+                        <p id="currency-relatedclaims-paid"></p>
+                        <p id="dollar-relatedclaims-paid"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-benefits" style="display:none">VIEW EXPLANATION OF BENEFITS</button>
+                        </div>
+                    </div>
+                    <div id="icon_container_div" style="display:none">
+
+	<div id="processed_icon"><i class="fa fa-check" ></i></div>
+	<div id="issuing_payment_icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hand-holding-usd" class="svg-inline--fa fa-hand-holding-usd fa-w-17" role="img" viewBox="0 0 544 512"><path fill="currentColor" d="M257.6 144.3l50 14.3c3.6 1 6.1 4.4 6.1 8.1 0 4.6-3.8 8.4-8.4 8.4h-32.8c-3.6 0-7.1-.8-10.3-2.2-4.8-2.2-10.4-1.7-14.1 2l-17.5 17.5c-5.3 5.3-4.7 14.3 1.5 18.4 9.5 6.3 20.3 10.1 31.8 11.5V240c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16v-17.6c30.3-3.6 53.3-31 49.3-63-2.9-23-20.7-41.3-42.9-47.7l-50-14.3c-3.6-1-6.1-4.4-6.1-8.1 0-4.6 3.8-8.4 8.4-8.4h32.8c3.6 0 7.1.8 10.3 2.2 4.8 2.2 10.4 1.7 14.1-2l17.5-17.5c5.3-5.3 4.7-14.3-1.5-18.4-9.5-6.3-20.3-10.1-31.8-11.5V16c0-8.8-7.2-16-16-16h-16c-8.8 0-16 7.2-16 16v17.6c-30.3 3.6-53.3 31-49.3 63 2.9 23 20.7 41.3 42.9 47.7zm276.3 183.8c-11.2-10.7-28.5-10-40.3 0L406.4 402c-10.7 9.1-24 14-37.8 14H256.9c-8.3 0-15.1-7.2-15.1-16s6.8-16 15.1-16h73.9c15.1 0 29-10.9 31.4-26.6 3.1-20-11.5-37.4-29.8-37.4H181.3c-25.5 0-50.2 9.3-69.9 26.3L67.5 384H15.1C6.8 384 0 391.2 0 400v96c0 8.8 6.8 16 15.1 16H352c13.7 0 27-4.9 37.8-14l142.8-121c14.4-12.1 15.5-35.3 1.3-48.9z"></path></svg></div>
+	<div id="received_icon"><svg  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-import" class="svg-inline--fa fa-file-import fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M16 288c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h112v-64zm489-183L407.1 7c-4.5-4.5-10.6-7-17-7H384v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-153 31V0H152c-13.3 0-24 10.7-24 24v264h128v-65.2c0-14.3 17.3-21.4 27.4-11.3L379 308c6.6 6.7 6.6 17.4 0 24l-95.7 96.4c-10.1 10.1-27.4 3-27.4-11.3V352H128v136c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H376c-13.2 0-24-10.8-24-24z"></path></svg></div>
+	<div id="processing_icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sync" class="svg-inline--fa fa-sync fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z"></path></svg></div>
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    </div>
+    <!-- end of card -->

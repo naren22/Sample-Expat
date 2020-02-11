@@ -1,0 +1,122 @@
+.location-change p {
+    font-size: 14px;
+    color: red;
+    line-height: 5px;
+}
+.location-change {
+   display:none;
+}
+.provider-results-cards-container .card-details{
+    padding-left: 25px;
+    }
+
+
+body div.bodyMainDiv{
+   flex: 1 0 auto;
+}
+
+.facility-icon {
+    color: #003DA1;
+    padding-left: 30px;
+}
+
+.user-icon {
+    color: #003DA1;
+    padding-left: 30px;
+}
+
+			 
+ .addressSection p
+ {
+	word-wrap: break-word;
+    max-width: 160px;
+ }
+ 
+ 
+ #location-empty-error{
+ 	margin-top:20px;
+ }
+ 
+ /* GOP CSS */
+.info-gop {
+    font-size: 0.85em;
+    padding: 10px 0 10px 0;
+}
+
+#gop-important-notice {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+#gop-important-notice-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #FFF;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 15px;
+}
+
+.cancel-claim-button button {
+    border-radius: 0;
+    margin: 5px 5px;
+    font-size: 11px;
+}
+
+.cancel-claim-button .gop-important-notice-dialog-close {
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 0.75em;
+    padding: 11px 10px;
+    min-width: 10em;
+}
+
+.help-contact-us-info-gop a {
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.help-contact-us-info-gop .help-contact-us-info-text {
+    color: #000;
+    cursor: default;
+}
+
+.help-contact-us-info-gop a span {
+    font-size: 16px;
+}
+
+.help-contact-us-info-gop .help-contact-us-info-number {
+    color: #003DA1;
+}
+.help-contact-us-info-gop .help-contact-us-info-number:hover {
+    color: #2D2D39;
+    text-decoration: underline;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.hide{
+	display:none;
+}
+

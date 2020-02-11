@@ -1,0 +1,86 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<html data-sly-use.responseStatus="apps.sling.servlet.errorhandler.ResponseStatus">
+<head>
+    <script src="//assets.adobedtm.com/launch-EN7ae963344fd9448aa06c693c14cf5948-development.min.js"></script>
+
+<title>File not found</title>
+</head>
+
+<body>
+    <p>A custom errorhandler for 404 responses</p>
+</body>
+        <script>
+        window.pageDataLayer = {
+	
+	    "content": {
+	        "pageName":  "errorPage",
+	        "siteSectionL1": "",           
+	        "siteSectionL2": "",           
+	        "website": "uhcglobalinsurance",
+	        "businessUnit": "uhc",
+	        "referringSite": "", 
+	        "language": "en" 
+	    }
+	};
+	
+	window.publishPostPageData = function(name, obj) {
+	    for (var attrname in obj) {
+	        if (obj.hasOwnProperty(attrname)) {
+	            pageDataLayer[attrname] = obj[attrname];
+	        }
+	    }
+	    try {
+	        obj = JSON.stringify(obj, false, 4);
+	        console.log(name, obj);
+	    } catch (e) {}
+	};
+
+/*function tagPublishPostPageData(tagInfo, trackEvent){
+		window.publishPostPageData(trackEvent,{
+            "actions": {   
+                "linkText": tagInfo,
+                "linkDescription": tagInfo            
+            }   
+        });
+
+        // Satellite Function Call 
+        _satellite.track(trackEvent);
+	}
+ tagPublishPostPageData('404 Page Not found', 'trackPageNotFound');*/
+
+function tagSystemErrorNote(errorName, errorCode){
+		window.publishPostPageData('trackErrorPageLoad',{
+            "error": {   
+                "errorType": "client-side error",
+                "errorName": errorName,
+                "errorCode": errorCode
+            }   
+        });
+
+        // Satellite Function Call 
+        _satellite.track('trackErrorPageLoad');
+	}
+
+tagSystemErrorNote('File not found','404');
+        </script>
+
+  <footer>
+          <script type="text/javascript">_satellite.pageBottom();</script> 
+  </footer>
+
+</html>
+

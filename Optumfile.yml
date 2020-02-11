@@ -1,0 +1,8 @@
+apiVersion: v1
+metadata:
+  askId: UHGWM110-022528
+  caAgileId: Scrum & Coke
+  projectKey: com.optum.usmarket:expatportal
+  projectFriendlyName: ExPat Portal (UHC Global US Market)
+  componentType: code
+  targetQG: GATE_00

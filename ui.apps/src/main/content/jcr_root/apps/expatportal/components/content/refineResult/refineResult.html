@@ -1,0 +1,69 @@
+<div id="filter-container">
+   <p class="refine-title pb-1">Refine Results</p>
+   <button class="accordion">LOCATION</button>
+   <div class="panel">
+      <div class="mt-3 mb-5">
+         <p class="mb-0 mt-2">WHERE</p>
+         <div class="pl-3">
+            <p class="mb-0" id="location2"> </p>
+            <a href="#" onclick="openChangeLocation()" class="change-location-refine-result-btn">
+            CHANGE LOCATION
+            </a>
+         </div>
+         <p class="mb-0 mt-2">DISTANCE</p>
+         <select class="form-control location-distance">
+            <option value "10">Within 10KM</option>
+            <option value "20">Within 20KM</option>
+            <option value "50">Within 50KM</option>
+            <option value "100">Within 100KM</option>
+            <option value "150">Within 150KM</option>
+         </select>
+      </div>
+   </div>
+</div>
+
+<div class="text-center">
+     <button class="btn btn-primary display-filter-btn mb-4" onclick="displayFilterProvider()">FILTER RESULTS
+     </button>
+</div>
+
+<div id="filterProvider">
+            <div class="filter-provider-container">
+                <div class="container filter-container-sm">
+                    <div class="row">
+                        <div class="col-lg-8 col-8 text-left">
+                            <h3 class="mt-3">
+                                Refine Results
+                            </h3>
+                        </div>
+                        <div class="col-lg-4 col-4 text-right">
+                            <button class="modal-close" aria-label="Close" onclick="closeFilterProvider()"></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <p id="filterProviderMsg">Results updated. Click the Close button to see the changes.</p>
+			   </div>
+            </div>
+</div>
+
+<div id="filter-template" style="display:none">
+   <div class="filter-heading-result">
+     <button class="accordion">SPECIALITY</button>
+      <div class="panel">
+         <div class="mt-3 mb-5">
+         </div>
+      </div>
+   </div>
+ </div>
+   <div id="checkbox-template" style="display:none">
+   <div class="checkbox-filter-result">
+      <label class="refine-checkbox-container">
+      <span class="text">Gastroenterology</span>
+      <input type="checkbox" value = "Gastroenterology" id ="Gastroenterology">
+      <span class="checkmark"></span>
+      </label>
+      </div>
+   </div>
+   <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.js @ categories='expatportal.providerDetailSearch'}"/>
+  

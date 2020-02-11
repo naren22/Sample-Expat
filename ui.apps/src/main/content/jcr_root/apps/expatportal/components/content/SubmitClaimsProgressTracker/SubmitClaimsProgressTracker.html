@@ -1,0 +1,67 @@
+<sly data-sly-test="${wcmmode.edit}">
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    </br>
+<div class="mx-5">
+    <div class="row">
+        <div class="col-lg-12 claim-header-text" style="display:flex" >
+            <span>
+                <i class=${properties.iconPath} style="font-size:33px;color:#003DA1"> &nbsp;</i>
+           </span>
+            &nbsp;
+            <h2 style="color:${properties.titlecolor  @ context='styleToken'}">${properties.claimTitle}</h2>
+        </div>
+    </div>
+<div class="row progress-steps">
+        <div class="col-lg-12">
+            <div>
+              <ul class="progress-tracker progress-tracker--center progress-tracker--text">
+                <li class="progress-step">
+                  <a href="${properties.enterClaimPath}">
+                    <span class="progress-marker">1</span>
+                    <span class="progress-text">
+                      <h4 class="progress-title">${properties.enterClaimStep}</h4>
+                      <!-- Summary text explaining this step to the user -->
+                    </span>
+                  </a>
+                </li>
+            
+                <li class="progress-step">
+                  <a href="${properties.uploadFilesPath}">
+                    <span class="progress-marker">2</span>
+                    <span class="progress-text">
+                      <h4 class="progress-title">${properties.uploadFilesTitle}</h4>
+                      <!-- Summary text explaining this step to the user -->
+                    </span>
+                  </a>
+                </li>
+            
+                <li class="progress-step">
+                  <a href="${properties.submitFormPath}">
+                    <span class="progress-marker">3</span>
+                    <span class="progress-text">
+                      <h4 class="progress-title">${properties.submitFormTitle}</h4>
+                      <!-- Summary text explaining this step to the user -->
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>       
+            </div>
+    </div>
+    <hr id="progressLine">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="claim-info">
+           <h3 id="claimInfoTitle" style="color:${properties.infoTitlecolor  @ context='styleToken'}">${properties.claimInfoTitle}</h3>
+                <div class="claim-greetings">
+                ${properties.text @context='html'}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

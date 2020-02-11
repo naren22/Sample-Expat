@@ -1,0 +1,192 @@
+<script>
+  $(".header").hide();
+  $(".globalFooter").hide();   
+</script>
+
+<div id="viewpan" style="padding:10px;  " >
+<div class="row">
+<div id="viewPreference" class="col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3" data-getprefurl="${properties.getPreferenceURL}">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-3">
+                <div class="icon-container-rounded">
+                    <span>
+                        <i class="fa fa-user fa-4x"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-10 col-9 profile-name">
+                <h1 class="subname"></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12" id="my-profile-reimbursement-ctn">
+        <div class="row">
+            <div class="col-lg-12 my-account-header-title">
+                <h2 class="mb-0 py-2">${properties.mainHeading ||'MANAGE REIMBURSEMENT PREFERENCESd'}</h2>
+            </div>
+        </div>
+        <hr id="progressLine" class="mt-0">
+        <div class="row">
+            <div class="col-lg-12">
+                <p  class="mb-0 text-left sub">${properties.desc}</p>
+                <p  class="mb-0 text-left dep">${properties.depdesc}</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                <p class="font-weight-bold  mb-0">Reimbursement Method</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <p id="reimbursement-method-text" class="mb-0"></p>
+            </div>
+        </div>
+        <div id="eft-method">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold mb-0">Payee Name</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p id="name" class="mb-0 account-settings-text-value"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Country</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p class="mb-0 cntry account-settings-text-value"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Currency</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p class="mb-0 crncy account-settings-text-value"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Bank Name</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p class="mb-0 bnkname account-settings-text-value"></p>
+                </div>
+            </div>
+            <div id="dynamic-banking-reference">
+                <div class="row hidden-banking-dynamic-container">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                        <p class="font-weight-bold mb-0"></p>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                        <p class="mb-0 account-settings-text-value"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="dynamic-banking">
+            </div>
+            <div id="dynamic-address-reference">
+                <div class="row hidden-banking-dynamic-container">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                        <p class="font-weight-bold mb-0"></p>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                        <p class="mb-0 account-settings-text-value"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="dynamic-address">
+            </div>
+        </div>
+        <!--end of eft-method -->
+        <div id="check-method">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 my-2">
+                    <div class="check-method-text-box">
+                        <p class= "sub">${properties.descTwo}</p>
+						<p class="dep">${properties.depdescTwo}</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Payee Name</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p class="mb-0 name account-settings-text-value"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Country</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p id="country" class="mb-0 cntry account-settings-text-value"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+                    <p class="font-weight-bold  mb-0">Currency</p>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+                    <p  class="mb-0 crncy account-settings-text-value"></p>
+                </div>
+            </div>
+        </div>
+        <!--end of check-method -->
+        <div class="row my-4 sub">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <button type="button" class="btn btn-primary edit-preference-btn">${properties.bText}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div id="system-error-note" class="submit-claim-modal">
+
+		<div class="submit-claim-modal-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-8 mt-4 text-left">
+						<h3 class="mb-0">Oops...something went wrong.</h3>
+					</div>
+					<div class="col-lg-4 col-4 mt-2 text-right close-mark">
+						<button class="btn modal-close" onclick="getPreference.error(false)"></button>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col text-left">
+						<p class="m-0">An unexpected error has occurred. Please try again. If the error persists, please contact us.</p>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col text-center submit-claim-modal-button">
+						<button type="button" class="btn btn-primary px-3"
+							onclick="getPreference.error(false)">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    
+    <div id="system-error-note-loader" class="submit-claim-loader">
+        <div class="submit-claim-loader-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+                        <div class="submit-claim-loader-animation">
+    
+                        </div>
+                        <!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='expatportal.preference.view'}" data-sly-unwrap/>

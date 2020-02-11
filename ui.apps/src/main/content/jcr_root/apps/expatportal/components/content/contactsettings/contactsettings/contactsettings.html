@@ -1,0 +1,341 @@
+<div class="container-fluid k-content pb-0">
+				<main>
+<div class="row">
+	<div id="system-error-note" class="submit-claim-modal">
+		<div class="submit-claim-modal-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-8 mt-4 text-left">
+						<h3 class="mb-0">Oops...something went wrong.</h3>
+
+					</div>
+					<div class="col-lg-4 col-4 mt-2 text-right close-mark">
+						<button class="btn modal-close" onclick="closeSystemErrorNote()"></button>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col  text-left">
+						<p class="m-0">An unexpected error has occurred. Please try
+							again. If the error persists, please contact us.</p>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col text-center submit-claim-modal-button">
+						<button type="button" class="btn btn-primary px-3"
+							onclick="closeSystemErrorNote()">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="system-error-note-loader" class="submit-claim-loader">
+		<div class="submit-claim-loader-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+						<div class="submit-claim-loader-animation"></div>
+						<!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-2 col-3">
+				<div class="icon-container-rounded">
+					<span> <i class="fa fa-user fa-4x"></i>
+					</span>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11 col-sm-10 col-9 profile-name">
+				<h1></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-5 col-md-6 col-sm-12 col-12"
+		id="my-profile-reimbursement-ctn">
+		<div class="row">
+			<div class="col-lg-12 my-account-header-title">
+				<h2 class="mb-0 py-2">${properties.Heading}</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="mb-0 text-left">${properties.Description}</p>
+			</div>
+		</div>
+
+		<div class="row mt-3">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold mb-0">Member ID</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value member-id"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Group Number</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value grpnumber"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Gender</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 gender"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Date of Birth</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 dob"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Citizen of</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value country"></p>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="address-header">
+					<h4>${properties.Addressheading}</h4>
+				</div>
+			</div>
+		</div>
+		<div id="dynamic-address-reference">
+			<div class="row hidden-banking-dynamic-container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold mb-0"></p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0"></p>
+				</div>
+			</div>
+		</div>
+		<div id="dynamic-address">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold mb-0">Address 1</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value address1"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold mb-0">Address 2</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value address2"></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">City</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value city"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">State / Province</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value state"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Country</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value addrCountry"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="font-weight-bold  mb-0">Postal Code</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+				<p class="mb-0 account-settings-text-value postal"></p>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="address-header">
+					<h4>${properties.Contactnumbersheading}</h4>
+				</div>
+			</div>
+		</div>
+		
+		<div id="dynamic-phone-number-reference">
+			<div class="row hidden-dynamic-container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold mb-0"></p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value"></p>
+				</div>
+			</div>
+		</div>
+		<div id="dynamic-phone-number">
+			<div class="row primary" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Primary</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value primaryPhone"></p>
+				</div>
+			</div>
+			<div class="row alternative" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Alternative</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value alternativePhone"></p>
+				</div>
+			</div>
+			<div class="row mobile" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Mobile</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value mobilePhone"></p>
+				</div>
+			</div>
+			<div class="row other" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Other</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value otherPhone"></p>
+				</div>
+			</div>
+			<div class="row work" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Work</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value workPhone"></p>
+				</div>
+			</div>
+			<div class="row home" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Home</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value homePhone"></p>
+				</div>
+			</div>
+			<div class="row office" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Office</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value officePhone"></p>
+				</div>
+			</div>
+			<div class="row cell" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Cell</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value cellPhone"></p>
+				</div>
+			</div>
+			<div id="no-phone-number" style="display:block">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+					<p class="mb-0">No phone number provided by your organization.</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="address-header">
+					<h4>${properties.Emailaddressesheading}</h4>
+				</div>
+			</div>
+		</div>
+
+		<div id="dynamic-email-reference">
+			<div class="row hidden-email-dynamic-container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold mb-0"></p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value"></p>
+				</div>
+			</div>
+		</div>
+		<div id="dynamic-email">
+			<div class="row primary" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Primary Email</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value primaryEmail"></p>
+				</div>
+			</div>
+			<div class="row secondary" style="display: none">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="font-weight-bold  mb-0">Secondary Email</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+					<p class="mb-0 account-settings-text-value secondaryEmail"></p>
+				</div>
+			</div>
+			<div id="no-email" style="display: none">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+						<p class="mb-0">No email address provided by your
+							organization.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    function displaySystemError() {
+        document.getElementById("system-error-note-loader").style.display = 'block';
+        window.setTimeout(
+            function () {
+                document.getElementById("system-error-note-loader").style.display = 'none';
+                document.getElementById("system-error-note").style.display = 'block';
+            }, 5000);
+    }
+
+
+    function closeSystemErrorNote() { // close the system error note
+        document.getElementById("system-error-note-loader").style.display = 'none';
+        document.getElementById("system-error-note").style.display = 'none';
+    }
+</script>
+</main>
+			</div>
+
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='expatportal.contactsettings'}" />

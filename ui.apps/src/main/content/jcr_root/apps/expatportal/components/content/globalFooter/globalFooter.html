@@ -1,0 +1,134 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder section" data-emptytext="Footer - Expat Portal"></div> 
+<input type="hidden" id="copyRightsDialogValue" value="${properties.copyRightsText}">
+<input type="hidden" id="iPerceptionsKey" value="${properties.iPerceptionsKey}">
+<sly data-sly-use.data="global-footer-use.js">
+<section class="arcade-chrome-root">
+	<footer>
+		<div class="container footer-links">
+			<div class="row">
+				<div class="member-support-section col-lg-4">
+					<h3>
+						<span>${properties.groupOneTitle}</span>
+					</h3>
+					<ul>
+						<sly data-sly-list="${data.listOne.listChildren}">
+						<li>
+							<a class="global-footer-anchor-expat-portal" data-isExternalLink="${item.isExternalLink}" href="${item.linkUrl @ context='scriptString'}" target="${item.openInNewTab ? '_blank':''}">
+								<span>${item.linkTitle}</span>
+							</a>
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+						</li>
+						</sly>
+					</ul>
+				</div>
+				<div class="quick-link-section col-lg-4">
+					<h3>
+						<span>${properties.groupTwoTitle}</span>
+					</h3>
+					<ul>
+						<sly data-sly-list="${data.listTwo.listChildren}">
+						<li>
+							<a id="quicklink" data-sly-test="${item.openInNewTab}" class="global-footer-anchor-expat-portal" data-isexternallink="${item.isExternalLink}" data-laddr="${item.linkUrl}" href="javascript:void(0)" target="${item.openInNewTab ? '_blank':''}">
+								<span>${item.linkTitle}</span>
+							</a>
+									<sly data-sly-test="${item.openInNewTab}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+							<a data-sly-test="${!item.openInNewTab}" id="quicklink" class="global-footer-anchor-expat-portal" data-isexternallink="${item.isExternalLink}" data-laddr="${item.linkUrl}" href="javascript:void(0);" target="${item.openInNewTab ? '_blank':''}">
+								<span>${item.linkTitle}</span>
+							</a>		
+						</li>
+						</sly>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container footer-links mt-4">
+			<div class="row">
+				<div class="footer-bottom col-lg-8">
+					<div class="about-container">
+						<ul>
+							<li>
+								<span id="copyrightYear"></span>
+							</li>
+							<li>
+                                <a class="global-footer-anchor-expat-portal" data-isExternalLink="${properties.isExternalLinkAboutUs}" target="${properties.openInNewTabAboutUs ? '_blank':''}" href="${properties.aboutUsUrl}">
+									<span>${properties.aboutUsTitle}</span>
+								<sly data-sly-test="${properties.openInNewTabAboutUs}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="legal-container">
+						<ul>
+						<sly data-sly-list="${data.listThree.listChildren}">
+							<li>
+								<a id="one" data-sly-test="${item.openInNewTab}" class="global-footer-anchor-expat-portal" data-isExternalLink="${item.isExternalLink}" target="${item.openInNewTab ? '_blank':''}" href="${item.linkUrl}">
+									<span>${item.linkTitle}</span>
+									<sly data-sly-test="${item.openInNewTab}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+								</a>
+								<a id="two" data-sly-test="${!item.openInNewTab}" class="global-footer-anchor-expat-portal" data-isExternalLink="${item.isExternalLink}" target="${item.openInNewTab ? '_blank':''}" data-link-url="${item.linkUrl}" href="javascript:void(0);">
+									<span>${item.linkTitle}</span>
+									<sly data-sly-test="${item.openInNewTab}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+								</a>
+							</li>
+						</sly>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom col-lg-4">
+					<div class="assistance-container">
+						<ul>
+							<li>
+                                <a class="global-footer-anchor-expat-portal" data-isExternalLink="${properties.isExternalLinkAssistance}" target="${properties.openInNewTabAssistance ? '_blank':''}" href="${properties.assistanceLinkUrl}">
+									<span>${properties.assistanceLinkTitle}</span>
+									<sly data-sly-test="${properties.openInNewTabAssistance}">
+									<span>
+										<i class="fa fa-external-link"></i>
+									</span>
+									</sly>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</section>
+</sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='expat-portal-footer'}"/>
+
+<script>
+	document.getElementById("copyrightYear").innerHTML = "©" + " " + new Date().getFullYear() + " " +document.getElementById("copyRightsDialogValue").value;
+</script>
+<script>
+    /*Copyright 2011-2015 iPerceptions, Inc. All rights reserved. 
+    Do not distribute.iPerceptions provides this code 'as is' without warranty of any kind, 
+    either express or implied. */ 
+    var inputKey=document.getElementById("iPerceptionsKey").value;
+    window.iperceptionskey = inputKey;
+	(function () { 
+        var a = document.createElement('script'),b = document.getElementsByTagName('body')[0]; 
+        a.type = 'text/javascript'; 
+        a.async = true;
+        a.src = '//universal.iperceptions.com/wrapper.js';
+        b.appendChild(a);})();
+</script>

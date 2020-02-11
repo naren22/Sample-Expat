@@ -1,0 +1,182 @@
+
+ <div class="row">
+        <div class="col-lg-12">
+            <div class="claim-info">
+                <h3 id="claimInfoTitle">${properties.infoTitle}</h3>
+				${properties.infoText @ context='html'}
+            </div>
+        </div>
+    </div>
+
+<input type="hidden" id="claimMemberServiceURL" value="${properties.memberServiceURL}" />
+<input type="hidden" id="claimProviderServiceURL" value="${properties.providerServiceURL}" />
+<input type="hidden" id="claimSubmitURL" value="${properties.memberServiceURL}" />
+<input type="hidden" id="claimCountryURL" value="${properties.countryServiceURL}" />
+<input type="hidden" id="claimCurrencyURL" value="${properties.currencyServiceURL}" />
+<input type="hidden" id="paymentPreferencesServiceURL" value="${properties.paymentPreferencesServiceURL}" />
+<input type="hidden" id="onetimepaymentServiceURL" value="${properties.onetimepaymentServiceURL}" />
+
+
+
+
+    <div class="controls claim-info-fields">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="member">
+                        ${properties.memberFieldText}
+                    </label>
+                    <select class="form-control" id="member">
+                        <option selected></option>
+                      <!--  <option value="Vikkte Heid">Vikkte Heid &nbsp;&nbsp; 06-Jun-1980</option>
+                        <option value="Joseph Heid">Joseph Heid &nbsp;&nbsp; 14-Feb-1982</option>
+                        <option value="Anna Marie Heid">Anna Marie Heid &nbsp;&nbsp; 03-Nov-1995</option>
+                        <option value="Maria Heid">Maria Heid &nbsp;&nbsp; 25-Mar-1999</option>    -->
+                    </select>
+                    <p id="submit-claim-member-req-msg" class="text-danger">Member is required.</p>
+                </div>
+                <div class="form-group">
+                   
+                        <span title="Please enter the name of the provider who rendered the services." onclick="openProviderNote()" class="provider-note-btn">
+                            <i class="fa fa-info-circle"></i>
+                        </span>
+
+                        <label for="provider">
+                   ${properties.providerFieldText}
+                </label>
+                    
+                    <input type="text" class="form-control" list="providerList" name="provider" id="provider" autocomplete=off maxlength="150">
+                    <datalist id="providerList">
+                      <!--  <option value="Hospital" />
+                        <option value="Clinic" />
+                        <option value="Laboratory" />  -->
+                    </datalist>
+                    <p id="submit-claim-provider-req-msg" class="text-danger mb-0">Provider is required.</p>
+                    <p id="submit-claim-provider-char-msg" class="text-danger mb-0">Provider name allows only alphanumeric characters and ! # $ & ( ) " , . / : ; @ [] \ _ ` ‘ ’ “ ” + ' \ - – Ž Θ Ξ Ο Π Σ Ω </p>
+                </div>
+                <div class="form-group">
+                    <label for="location-country">
+					 ${properties.providercountryFieldText}
+                    </label>
+                    <input type="text" class="form-control" list="country" name="country" id="providerCountry" autocomplete=off maxlength="100">
+                    <datalist id="country">
+                     <!--   <option value="Australia" />
+                        <option value="India" />
+                        <option value="Japan" />
+                        <option value="Philippines" />
+                        <option value="United Kingdom" />
+                        <option value="United States" />  -->
+                    </datalist>
+                    <p id="submit-claim-providercountry-req-msg" class="text-danger mb-0">Provider Country is required.</p>
+                    <p id="submit-claim-providercountry-invalid-msg" class="text-danger mb-0">Please enter a valid country name.</p>
+                    <p id="submit-claim-providercountry-char-msg" class="text-danger mb-0">Provider Country allows only alphabetic characters and . - & ' ( ) , Å ô é </p>
+                </div>
+                <div id="country-note" class="form-group note-display">
+                    <div class="row">
+                        <div>
+                            <i class="fa fa-exclamation-triangle fa-2x exclamation-icon"></i>
+                        </div>
+                        <div class="col claim-note">
+                            <p>
+                                Please note, if your claim was incurred in the United States, you will not view it here on the Global Gateway. Please visit
+                                myuhc.com to view your U.S. claims.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="providerCity">
+					 ${properties.providercityFieldText}
+                   </label>
+                    <input type="text" class="form-control" id="providerCity" aria-required="false" aria-labelledby="Provider City" maxlength="100"
+                    />
+                    <p id="submit-claim-providercity-req-msg" class="text-danger mb-0">Provider City is required.</p>
+                    <p id="submit-claim-providercity-char-msg" class="text-danger mb-0">Provider City allows only alphanumeric characters and . - & ; ' ,</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="claimNickname">
+                    ${properties.claimnicknameFieldText}
+                    </label>
+                    <input type="text" class="form-control" id="claimNickname" aria-required="false" aria-labelledby="Claim Nickname" maxlength="150"
+                    />
+                    <p id="submit-claim-nickname-char-msg" class="text-danger mb-0">Claim Nickname allows only alphanumeric characters and . - & ; ',</p>
+                </div>
+                <div class="form-group">
+                    <label for="billedAmount">
+                   ${properties.billedamountFieldText}
+                    </label>
+                    <input type="text" class="form-control" id="billedAmount" aria-required="false" aria-labelledby="Billed Amount" />
+                    <p id="submit-claim-billed-amount-req-msg" class="text-danger mb-0">Billed Amount is required.</p>
+                    <p id="submit-claim-billed-amount-valid-msg" class="text-danger mb-0">Billed Amount must be a valid number.</p>
+                    <p id="submit-claim-billed-amount-greater-msg" class="text-danger mb-0">Billed Amount must be greater than zero.</p>
+                </div>
+                <div class="form-group">
+                    <label for="claimCurrency">
+                   ${properties.claimcurrencyFieldText}
+                    </label>
+                    <input type="text" class="form-control" list="currency" name="currency" id="claimCurrency" aria-required="false" aria-labelledby="Claim Currency"
+                        maxlength="100">
+                    <datalist id="currency">
+                     <!--   <option value="Philippine Peso" />
+                        <option value="US Dollar" />
+                        <option value="Euro" />
+                        <option value="Singapore Dollar" />
+                        <option value="South Korean won" />
+                        <option value="New Zealand dollar" />      -->
+                    </datalist>
+                    <p id="submit-claim-currency-req-msg" class="text-danger mb-0">Claim Currency is required.</p>
+                    <p id="submit-claim-currency-invalid-msg" class="text-danger mb-0">Please enter a valid currency.</p>
+                    <p id="submit-claim-currency-char-msg" class="text-danger mb-0">Claim Currency allows only alphabetic characters and . - & '</p>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfService">
+                    ${properties.dateofserviceFieldText}
+                    </label>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" id="dateOfService" aria-required="false" aria-labelledby="Date of Service" placeholder="DD-MM-YYYY"
+                        />
+                        <span class="input-group-addon date-of-service-icon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                    <p id="submit-claim-dateservice-req-msg" class="text-danger mb-0">Date of Service is required.</p>
+                    <p id="submit-claim-dateservice-future-msg" class="text-danger mb-0">Date of Service cannot be a future date.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group diagForm">
+                    <label for="diagnosis">
+                    ${properties.diagnosisFieldText}
+                    </label>
+                    <p id="diagDetails" class="mb-0">${properties.diagnosistext}
+                    </p>
+                    <p id="charDiagnosisLimit">150</p>
+                    <textarea class="form-control" id="diagnosisText" rows="3" maxlength="150" onload="diagnosisTextCtr(this.value)" onkeyup="diagnosisTextCtr(this.value)"></textarea>
+                    <p id="submit-claim-diagnosis-req-msg" class="text-danger mb-0">Diagnosis is required.</p>
+                    <p id="submit-claim-diagnosis-char-msg" class="text-danger mb-0">Diagnosis allows only alphanumeric characters and . - & ; ' ,</p>
+                </div>
+                <div class="form-group treatForm">
+                    <label for="treatment">
+                    ${properties.descriptionoftreatmentFieldText}
+                    </label>
+                    <p id="treatDetails" class="mb-0">${properties.descriptionoftreatmenttext}</p>
+                    <p id="charTreatmentLimit">250</p>
+                    <textarea class="form-control" id="treatmentText" rows="3" maxlength="250" onload="treatmentTextTextCtr(this.value)" onkeyup="treatmentTextTextCtr(this.value)"></textarea>
+                    <p id="submit-claim-treatment-req-msg" class="text-danger mb-0">Description of Treatment is required.</p>
+                    <p id="submit-claim-treatment-char-msg" class="text-danger mb-0">Description of Treatment allows only alphanumeric characters and . - & ; ' ,</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="lineBtn">
+    <div class="col text-center submit-claim-actions">
+    	 <button class="btn btn-danger btn-cancel-claim" data-link="${properties.cancelButtonUrl}" data-external="false" >Cancel</button>
+        <button id="submit-claim-info-btn" class="btn btn-secondary" onclick="submitClaimInfo()">Upload Files</button>
+    </div>
+    
+      <script>
+   		// window.pageDataLayer.content.pageName = "Enter Claim Information";
+    </script> 
+    

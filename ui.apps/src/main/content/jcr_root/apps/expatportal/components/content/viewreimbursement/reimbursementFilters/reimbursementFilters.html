@@ -1,0 +1,120 @@
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+
+
+    <div class="col-lg-3">
+        <div class="row">
+            <div class="col-xs pr-1 display-claim-icon">
+                <i class="claim-check"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" class="svg-inline--fa fa-check-circle fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg></i>
+            </div>
+            <div class="col display-claim-total">
+                <div class="row">
+                    <p id="displayClaimTitle">Displaying claims</p>
+                    <p id="totalNumberClaims"></p>
+                </div>
+                <div class="row">
+                    <p id="claimDateRange"></p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary display-filter-btn mb-4" onclick="displayFilterClaimReimbursement()">FILTER RESULTS</button>
+        </div>
+        <div id="filterReimbursement">
+            <div class="filter-view-claim-reimbursement-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-8 text-left">
+                            <h3 class="mt-3">
+                                Refine Results
+                            </h3>
+                        </div>
+                        <div class="col-lg-4 col-4 text-right">
+                            <button class="modal-close" onclick="closeRefineResult()"></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <p id="filterClaimReimbursementMsg">Results Updated. Click the Close button to see the changes.</p>
+                    <button class="accordion">BY YEAR</button>
+                    <div class="panel">
+                        <div class="mt-3 mb-5">
+                            <select class="form-control" id="filterByYearModal">
+                                
+                            </select>
+                        </div>
+                    </div>
+        
+                    <button class="accordion">BY DATE RANGE</button>
+                    <div class="panel-calendar" id="panelCalendarModal">
+                        <div class="mt-3 mb-5">
+                            <div class="form-group">
+                                <label for="dateRangeFromModal">From</label>
+                                <!-- <span class="text">FROM</span> -->
+                                <div class="input-group mb-2" id="datetimepickerFromModal">
+                                    <input type="text" class="form-control" id="dateRangeFromModal" onclick="displayCalendarModal()" aria-required="false" aria-labelledby="By Date Range"
+                                        placeholder="DD-MM-YYYY" />
+                                    <span class="input-group-addon date-of-service-icon" onclick="displayCalendarModal()">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <label for="dateRangeToModal">To</label>
+                                <!-- <span class="text">TO</span> -->
+                                <div class="input-group" id="datetimepickerToModal">
+                                    <input type="text" class="form-control" id="dateRangeToModal" onclick="displayCalendarModal()" aria-required="false" aria-labelledby="By Date Range"
+                                        placeholder="DD-MM-YYYY" />
+                                    <span class="input-group-addon date-of-service-icon" onclick="displayCalendarModal()">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary reset-filter-btn mb-2" onclick="resetFiltersModal()">RESET FILTERS</button>
+                    </div>
+                </div>
+            </div>
+        </div>     
+           <div class="refine-results-view-claim-reimbursement">
+            <h2 class="refine-title pb-1">Refine Results</h2>
+            <button class="accordion">BY YEAR</button>
+            <div class="panel">
+                <div class="mt-3 mb-5">
+                    <select class="form-control" id="filterByYear">
+                       
+                    </select>
+                </div>
+            </div>
+            
+            <button class="accordion">BY DATE RANGE</button>
+            <div class="panel-calendar" id="panelCalendar">
+                <div class="mt-3 mb-5">
+                    <div class="form-group">
+                        <label for="dateRangeFrom">From</label>
+                        <!-- <span class="text">FROM</span> -->
+                        <div class="input-group mb-2" id="datetimepickerFrom">
+                            <input type="text" class="form-control" id="dateRangeFrom" onclick="displayCalendar()" aria-required="false" aria-labelledby="By Date Range" placeholder="DD-MM-YYYY"
+                            />
+                            <span class="input-group-addon date-of-service-icon" onclick="displayCalendar()">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                        <label for="dateRangeTo">To</label>
+                        <!-- <span class="text">TO</span> -->
+                        <div class="input-group" id="datetimepickerTo">
+                            <input type="text" class="form-control" id="dateRangeTo" onclick="displayCalendar()" aria-required="false" aria-labelledby="By Date Range" placeholder="DD-MM-YYYY"
+                            />
+                            <span class="input-group-addon date-of-service-icon" onclick="displayCalendar()">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>            <div class="text-center">
+                <button class="btn btn-primary reset-filter-btn mb-2" onclick="resetFilters()">RESET FILTERS</button>
+            </div>
+        </div>
+    </div>
+
+
+

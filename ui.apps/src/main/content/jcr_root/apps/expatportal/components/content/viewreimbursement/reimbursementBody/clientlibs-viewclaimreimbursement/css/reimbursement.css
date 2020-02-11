@@ -1,0 +1,6 @@
+#amountreimbursed{
+  font-weight: bold; }
+
+#currencyreimbursed , #dollarreimbursed {
+  font-size: 12px;
+  font-weight: bold; }

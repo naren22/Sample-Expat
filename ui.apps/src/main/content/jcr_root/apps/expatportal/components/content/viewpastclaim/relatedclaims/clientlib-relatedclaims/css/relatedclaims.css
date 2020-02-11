@@ -1,0 +1,6 @@
+#amount-relatedclaims-billed,#amount-relatedclaims-paid{
+  font-weight: bold; }
+
+#dollar-relatedclaims-billed , #dollar-relatedclaims-paid,#currency-relatedclaims-billed,#currency-relatedclaims-paid{
+  font-size: 12px;
+  font-weight: bold; }

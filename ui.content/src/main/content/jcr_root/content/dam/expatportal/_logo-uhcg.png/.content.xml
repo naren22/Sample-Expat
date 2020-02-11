@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="47b7e932-1bdd-49bb-9cbe-c6c5584cbeb3">
+    <jcr:content
+        cq:lastReplicated="{Date}2019-04-26T04:06:30.395Z"
+        cq:lastReplicatedBy="nnallani"
+        cq:lastReplicationAction="Activate"
+        cq:name="_logo-uhcg.png"
+        cq:parentPath="/content/dam/expatportal"
+        dam:assetState="processed"
+        dam:relativePath="expatportal/_logo-uhcg.png"
+        jcr:lastModified="{Date}2019-07-28T17:25:39.367-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:extracted="{Date}2019-07-28T17:25:38.756-04:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Decimal}0.8123984336853027"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Decimal}2.864225387573242"
+            dam:Progressive="no"
+            dam:sha1="671e26b6fe5d0a5f189dda65f8591ca85d4df826"
+            dam:size="{Long}14920"
+            dc:format="image/png"
+            dc:modified="{Date}2019-07-28T17:25:03.631-04:00"
+            jcr:lastModified="{Date}2019-07-28T17:25:03.627-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}78"
+            tiff:ImageWidth="{Long}275"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

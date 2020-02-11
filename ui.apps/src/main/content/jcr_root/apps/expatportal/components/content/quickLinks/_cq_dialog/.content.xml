@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:lastReplicated="{Date}2019-10-28T11:23:35.809-05:00"
+    cq:lastReplicatedBy="uvanka"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Middle Buttons Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <multiField
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Button List"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <menuSubLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="List Of Buttons">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./buttons">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <buttonDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Enter Button Description"
+                                                    key="buttonDescription"
+                                                    name="./buttonDescription"
+                                                    required="{Boolean}true"/>
+                                                <linkUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Link To Button"
+                                                    key="linkUrl"
+                                                    name="./linkUrl"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/expatportal"/>
+                                                <isExternalLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you are configuring link to outside expat portal page."
+                                                    fieldLabel="Is External link ?"
+                                                    name="./isExternalLink"
+                                                    text="Is External link?"
+                                                    value="{Boolean}true"/>
+                                                <iconPath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Select Path Of Button Icon"
+                                                    key="iconPath"
+                                                    name="./iconPath"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/dam"/>
+                                                <externalLinkRequired
+                                                    cq:lastReplicated="{Date}2019-10-28T11:23:31.000-05:00"
+                                                    cq:lastReplicatedBy="uvanka"
+                                                    cq:lastReplicationAction="Activate"
+                                                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    fieldDescription="Select checkbox if you want external link indicator."
+                                                    fieldLabel="External link indicator required?"
+                                                    name="./externalLinkRequired"
+                                                    text="External link indicator required?"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </menuSubLinks>
+                        </items>
+                    </columns>
+                </items>
+            </multiField>
+            <tab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="UHC links"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Enter Description"
+                                key="description"
+                                name="./description"
+                                required="{Boolean}true"/>
+                            <linkUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Link To Button"
+                                key="linkUrl"
+                                name="./linkUrl"
+                                required="{Boolean}true"
+                                rootPath="/content/expatportal"/>
+                            <buttonDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Enter Button Description"
+                                key="buttonDescription"
+                                name="./buttonDescription"
+                                required="{Boolean}true"/>
+                            <quickLinkImg
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldLabel="Card Icon"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./quickLinkFile"
+                                mimeTypes="[image,image/jpeg,image/png,image/webp,image/tiff]"
+                                multiple="{Boolean}false"
+                                name="./quickLinkImg"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

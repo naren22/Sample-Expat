@@ -1,0 +1,139 @@
+<div style="display:none;">
+<div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 instructions-text">
+            <h3>${properties.mainHeading}</h3>
+            <h5>${properties.subHeading}</h5>
+            <p>
+				${properties.desc}
+            </p>
+            <sly data-sly-list.instructions="${resource.listChildren}" >
+                <ol data-sly-list="${instructions.listChildren}">
+                    <li>${item.listItem @context='html'}</li>
+
+                </ol>
+            </sly>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <div id="drop-area" onclick="openUploadFileExplorer()">
+                    <form id="form" class="my-form" action="/bin/file/upload.json" method="POST" enctype="multipart/form-data">
+                        <p id="txtUpload">${properties.uploadText @context='html'}</p>
+
+                        <!-- <div id="gallery" ></div> -->
+                        <div id="files" >
+								<!--<div class="card card-container m-1">
+                                    <span class="thumbail-close">
+                                    <i onclick="deleteFile(event,'434740.jp')" class="fa fa-times">
+                                    </i>
+                                    </span>
+                                    <div class="">
+                                   		<img class="card-img-top thumbnail-img" id="434740.jpg" src="">
+                                    </div>
+                                    <div>
+                                        <p class="card-text m-0 filename px-1" title="434740.jpg">434740.jpg</p>
+                                   		<p class="card-text filesize px-1"> 0.3 MB</p>
+                                    </div>
+                                    </div>-->
+                         </div>
+                        <input type="file" name="file" id="fileElem" multiple accept="image/*,.pdf"  onclick="this.value='';">
+                        <label id="upload-file-btn"class="button-upload" for="fileElem"></label>
+
+                    </form>
+                    <!-- <progress id="progress-bar" max=100 value=0></progress> -->
+                    
+                    
+                <!-- <form class="image-form">
+                    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                    <label class="button" for="fileElem">Browse</label>
+                </form> -->
+                <!-- <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                    <p id="txtUpload">Drag and drop file(s) below to Upload <br>or click to browse for files</p>
+                    <div class="form-inline justify-content-center btn-upload">
+                        <div class="form-group">
+                            <input type="file" name="files[]" id="js-upload-files" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                    </div>
+                </form> -->
+            </div>
+            <p id="submit-claim-file-size-msg" class="text-danger mb-0">Total file size cannot be greater than 20MB. </p>
+            <p id="submit-claim-file-size-zero-msg" class="text-danger mb-0">File size must be greater than 0 bytes.</p>
+            <p id="submit-claim-file-name-period-msg" class="text-danger mb-0">File name cannot contain more than one period.</p>
+            <p id="submit-claim-filename-duplicate-msg" class="text-danger mb-0">Duplicate file cannot be uploaded.</p>
+            <p id="submit-claim-invalid-file-type-msg" class="text-danger mb-0">File type must be .PDF, .JPG, .JPEG, .TIF, .TIFF or .PNG. Please rename file.</p>
+            <p id="submit-claim-filename-character-msg" class="text-danger mb-0">File name cannot contain \ /:*?"<>|. Please rename file.</p>
+            <p id="submit-claim-file-required-msg" class="text-danger mb-0">At least one file must be uploaded.</p>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+                  <!--  <label class="refine-checkbox-container"> -->
+                            <label class="upload-checkbox-container">                              
+                            <p class="text ">${properties.attestText}</p>
+                        <input type="checkbox" id="attestation-mark">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p id="submit-claim-attestation-msg" class="text-danger mb-0">You must select the attestation box in order to submit your claim.</p>
+                    <!-- <input type="checkbox" class="form-check-input" value="">
+                    <label class="form-check-label pr-1">I attest that to the best of my knowledge and belief, all information in the above referenced data reported
+                        is accurate and complete.
+                    </label> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div id="potential-virus" class="submit-claim-modal" style="display: block;">
+        <div class="submit-claim-modal-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+                        <h3 class="mb-0">Upload Failed.</h3>
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                        <button class="btn modal-close" onclick="closeVirusErrorNote()"></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col text-left">
+                        <p class="m-0">Potential virus detected on your file(s); unable to upload. Please correct and try again.</p>
+                        <p class="mt-2">File(s) affected:</p>
+                        <div id="virus-files">
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center submit-claim-modal-button">
+                        <button type="button" class="btn btn-primary px-3" onclick="closeVirusErrorNote()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="potetial-virus-loader" class="submit-claim-loader">
+        <div class="submit-claim-loader-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+                        <div class="submit-claim-loader-animation">
+
+                        </div>
+                        <!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <hr id="lineBtn">
+
+    <div class="col text-center submit-claim-actions">
+        <button class="btn btn-danger cancel-btn mb-2 mx-2" onclick="cancelClaim(event)">
+            <span class="button-text">Cancel</span>
+        </button>
+
+        <button id="review-claim-btn" class="btn btn-secondary submit-claim-btn mb-2 mx-2" >
+            <span class="button-text">Review Claim</span>
+        </button>
+    </div>
+                                                         </div>

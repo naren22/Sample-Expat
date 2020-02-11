@@ -1,0 +1,244 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='expatportal.arrangepayment'}"/>
+
+
+<div class="container k-content">
+<main>
+	<div class="row">
+        <div class="col-lg-12 header-text">
+            <h1 aria-label="ARRANGE A DIRECT PAYMENT TO A PROVIDER">
+                <i class="fa fa-file"></i> ${properties.mainheading}
+            </h1>
+        </div>
+	</div>
+
+    <div class="row">
+    <div id="system-error-note" class="submit-claim-modal">
+
+		<div class="submit-claim-modal-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-8 mt-4 text-left">
+						<h3 class="mb-0">Oops...something went wrong.</h3>
+					</div>
+					<div class="col-lg-4 col-4 mt-2 text-right close-mark">
+						<button class="btn modal-close" onclick="closeSystemErrorNote()"></button>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col text-left">
+						<p class="m-0">An unexpected error has occurred. Please try again. If the error persists, please contact us.</p>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col text-center submit-claim-modal-button">
+						<button type="button" class="btn btn-primary px-3"
+							onclick="closeSystemErrorNote()">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    
+    <div id="system-error-note-loader" class="submit-claim-loader">
+        <div class="submit-claim-loader-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-12 mt-4 text-center">
+                        <div class="submit-claim-loader-animation">
+    
+                        </div>
+                        <!-- <img src="../assets/toolkit/images/loader.svg" alt="Loading"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+    <div class="row">
+    <div id="cancel-gop-claim" style="display: none;">
+        <div id="cancel-gop-claim-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+                        <h3 class="mb-0">Cancel Direct Payment Arrangement?</h3>
+                        
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                            <button class="btn modal-close" onclick="closeGopModal()"></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col text-left">
+                        <p class="m-0">Are you sure you want to cancel your direct payment arrangement?"</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center cancel-gop-claim-button">
+                        <button type="button" class="btn btn-danger" onclick="cancelGopForm()">YES, CONTINUE AND LOSE DATA</button>
+                        <button type="button" class="btn btn-primary px-3" onclick="closeGopModal()">NO, TAKE ME BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+    <div class="row progress-steps">
+    <div class="col-lg-12">
+        <div>
+            <ul class="progress-tracker progress-tracker--center progress-tracker--text my-3">
+              <li class="progress-step is-complete" >
+                <a href="\www.google.com" aria-label="Back to Step 1, Choose Provider">
+                  <!-- <span class="progress-marker">1</span> -->
+                  <span class="progress-marker"><i class="fa fa-check"></i></span>
+                  <span class="progress-text">
+                    <p class="progress-title progress-title-gop">${properties.chooseprovider_bar} </p>
+                    <!-- Summary text explaining this step to the user -->
+                  </span>
+                </a>
+              </li>
+              <li class="progress-step progress2 is-active" >
+                <a href="\#" aria-label="You are in Step 2, Fill Out Guarantee of Payment">
+                  <span class="progress-marker">2</span>
+                  <span class="progress-text">
+                    <p class="progress-title progress-title-gop"> ${properties.filloutguaranteeofpayment_bar}</p>
+                    <!-- Summary text explaining this step to the user -->
+                  </span>
+                </a>
+              </li>
+              <li class="progress-step progress3" >
+                <a href="\#" aria-label="Disabled, Step 3, Review &amp; Submit Request">
+                  <span class="progress-marker">3</span>
+                  <span class="progress-text">
+                    <p class="progress-title progress-title-gop"> ${properties.reviewsubmitrequest_bar}</p>
+                    <!-- Summary text explaining this step to the user -->
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>   
+         </div>
+       </div>
+	<hr id="progressLine">
+	
+	<div id="step2">
+	<h2 class="provider-service-details-label ml-3"> ${properties.subheading} </h2>
+
+<div class="justify-content-lg-left col-lg-6 col-md-9 col-sm-12 col-12 mt-4">
+    <div class="row form-group">
+        <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+            <label for="patient">${properties.patientname}*</label>
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-12 col-12 pl-0">
+            <select class="form-control" id="patient">
+                <option value="" selected></option>
+
+            </select>
+            <div aria-live="assertive" aria-relevant="additions removals">
+                <p id="gop-patient-required-msg" class="mb-0 text-danger">Patient is required.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group mt-4">
+        <label for="diagnosisSymptomsText"> ${properties.diagnosis_symptoms}*</label>
+        <div class="row diagnosis-details">
+            <p id="diagSample" class="col-lg-10 mb-0"> ${properties.diagnosis_symptomsText}
+            </p>
+            <div aria-live="assertive" aria-relevant="additions removals">
+                <p id="charDiagLimit" class="text-right col-lg-2 mb-0" aria-label="150 Character Limit">150</p>
+            </div>
+        </div>
+        <textarea class="form-control" rows="4" maxlength="150" id="diagnosisSymptomsText"
+            placeholder="Please provide a description of your symptoms." onload="diagnosisSymptomsTextCtr(this.value)"
+            onkeyup="diagnosisSymptomsTextCtr(this.value)"></textarea>
+        <div aria-live="assertive" aria-relevant="additions removals">
+            <p id="gop-diagnosis-symptons-required-msg" class="mb-0 text-danger">Diagnosis / Symptoms is
+                required.</p>
+            <p id="gop-diagnosis-symptons-regex-msg" class="mb-0 text-danger">Diagnosis allows only
+                alphanumeric characters and  . , - & ; '</p>
+        </div>
+    </div>
+    <div class="row form-group mt-4">
+        <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+            <label for="service"> ${properties.servicesprocedure}*</label>
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-12 col-12 pl-0">
+            <select class="form-control" id="service">
+                <option value="" selected>Select service type</option>
+                <option value="Hospital - Emergency Medical">Hospital - Emergency Medical</option>
+                <option value="Medical Visit - Clinic">Medical Visit - Clinic</option>
+                <option value="Medical Visit - Physician">Medical Visit - Physician</option>
+                <option value="Urgent Care - not in ER">Urgent Care - not in ER</option>
+            </select>
+            <div aria-live="assertive" aria-relevant="additions removals">
+                <p id="gop-service-procedure-required-msg" class="mb-0 text-danger">Services / Procedure is
+                    required.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row form-group mb-4 mt-4">
+        <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+            <label for="dateOfService">${properties.dateofservice}*</label>
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-lg-12 input-group date pl-0" id="gop-date-of-service">
+                    <input type='text' class="form-control" id="dateOfService" aria-required="false"
+                        aria-labelledby="gopDateOfService" placeholder="DD-MM-YYYY" autocomplete="off" />
+                    <span class="input-group-addon date-of-service-icon" aria-hidden="true">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+                <span id="gopDateOfService" class="sr-only">Date of Service. You can choose date by navigating
+                    keyboard keys up, down, left and right. Also you can input date by typing numbers and it will
+                    automatically put dash between day, month and year.</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 px-0 pt-1">
+                    <p id="inputNote" class="mb-0 px-0">${properties.dateofservicetext}
+                    </p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 pl-0" aria-live="assertive" aria-relevant="additions removals">
+                    <p id="gop-date-service-required-msg" class="mb-0 text-danger">Date of Service is required.</p>
+                    <p id="gop-date-service-three-days-msg" class="mb-0 text-danger">Please select a Date of Service
+                        that is not more than 3 days prior to today's date.</p>
+                    <p id="gop-date-service-thirty-days-msg" class="mb-0 text-danger">Please select a Date of Service
+                        that is within the next 30 days of today's date.</p>
+                    <p id="gop-date-service-next-calendar-msg" class="mb-0 text-danger">Please select a Date of Service
+                        that is within this calendar year.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr id="lineBtn">
+<div class="row ">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-right mt-2 gop-button-forms">
+        <!-- <button type="button" class="btn btn-danger" onclick="closeChangeLocation()">CANCEL</button> -->
+        <button class="btn btn-danger" onclick="cancelGopSubmit()" arial-label="Cancel">Cancel</button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-left mt-2 gop-button-forms">
+        <button id="submit-gop-info-btn" class="btn btn-secondary" onclick="submitGopForm()" arial-label="Submit and Proceed to
+        Review">Submit and Proceed to
+            Review</button>
+        <!-- <button type="button" class="btn btn-primary">CHANGE TO THIS LOCATION</button> -->
+    </div>
+</div>
+</div>
+<sly data-sly-include="step3.html" />
+</main>
+
+
+
+
+</div>
+<sly data-sly-call="${clientlib.js @ categories='expatportal.arrangepayment'}"/>

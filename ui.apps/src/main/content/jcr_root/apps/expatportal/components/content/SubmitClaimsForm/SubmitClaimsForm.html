@@ -1,0 +1,369 @@
+<sly data-sly-test="${wcmmode.edit}">
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+		<div class="container-fluid k-content">
+		
+<main>
+
+<div class="mx-5">
+    <div class="controls claim-info-fields">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="member">
+                       ${properteis.member}
+                    </label>
+                    <select class="form-control" id="member">
+                        <option selected></option>
+                        <option>Vikkte Heid - 06-Jun-1980</option>
+                        <option>Joseph Heid - 14-Feb-1982</option>
+                        <option>Anna Heid - 03-Nov-1995</option>
+                        <option>Maria Heid - 25-Mar-1999</option>
+                    </select>
+                    <span class="text-danger">Member is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="provider">
+                        <span title="Please enter the name of the provider who rendered the services." onclick="openProviderNote()" class="provider-note-btn">
+                            <i class="fa fa-info-circle"></i>
+                        </span>
+                       ${properties.provider}
+                    </label>
+                    <input type="text" class="form-control" id="provider" aria-required="false" aria-labelledby="Provider" maxlength="150"/>
+                    <span class="text-danger">Provider is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="location-country">${proeprties.providercountry}</label>
+                    <input type="text" class="form-control" list="country" name="country" id="submitClaimCountry" autocomplete=off>
+                    <datalist id="country">
+                        <option value="Afghanistan" />
+                        <option value="Albania" />
+                        <option value="Algeria" />
+                        <option value="American Samoa" />
+                        <option value="Andorra" />
+                        <option value="Angola" />
+                        <option value="Anguilla" />
+                        <option value="Antarctica" />
+                        <option value="Antigua and Barbuda" />
+                        <option value="Argentina" />
+                        <option value="Armenia" />
+                        <option value="Aruba" />
+                        <option value="Australia" />
+                        <option value="Austria" />
+                        <option value="Azerbaijan" />
+                        <option value="Bahamas" />
+                        <option value="Bahrain" />
+                        <option value="Bangladesh" />
+                        <option value="Barbados" />
+                        <option value="Belarus" />
+                        <option value="Belgium" />
+                        <option value="Belize" />
+                        <option value="Benin" />
+                        <option value="Bermuda" />
+                        <option value="Bhutan" />
+                        <option value="Bolivia" />
+                        <option value="Bosnia and Herzegovina" />
+                        <option value="Botswana" />
+                        <option value="Bouvet Island" />
+                        <option value="Brazil" />
+                        <option value="British Indian Ocean Territory" />
+                        <option value="Brunei Darussalam" />
+                        <option value="Bulgaria" />
+                        <option value="Burkina Faso" />
+                        <option value="Burundi" />
+                        <option value="Cambodia" />
+                        <option value="Cameroon" />
+                        <option value="Canada" />
+                        <option value="Cape Verde" />
+                        <option value="Cayman Islands" />
+                        <option value="Central African Republic" />
+                        <option value="Chad" />
+                        <option value="Chile" />
+                        <option value="China" />
+                        <option value="Christmas Island" />
+                        <option value="Cocos (Keeling) Islands" />
+                        <option value="Colombia" />
+                        <option value="Comoros" />
+                        <option value="Congo" />
+                        <option value="Congo, The Democratic Republic of The" />
+                        <option value="Cook Islands" />
+                        <option value="Costa Rica" />
+                        <option value="Cote D'ivoire" />
+                        <option value="Croatia" />
+                        <option value="Cuba" />
+                        <option value="Cyprus" />
+                        <option value="Czech Republic" />
+                        <option value="Denmark" />
+                        <option value="Djibouti" />
+                        <option value="Dominica" />
+                        <option value="Dominican Republic" />
+                        <option value="Ecuador" />
+                        <option value="Egypt" />
+                        <option value="El Salvador" />
+                        <option value="Equatorial Guinea" />
+                        <option value="Eritrea" />
+                        <option value="Estonia" />
+                        <option value="Ethiopia" />
+                        <option value="Falkland Islands (Malvinas)" />
+                        <option value="Faroe Islands" />
+                        <option value="Fiji" />
+                        <option value="Finland" />
+                        <option value="France" />
+                        <option value="French Guiana" />
+                        <option value="French Polynesia" />
+                        <option value="French Southern Territories" />
+                        <option value="Gabon" />
+                        <option value="Gambia" />
+                        <option value="Georgia" />
+                        <option value="Germany" />
+                        <option value="Ghana" />
+                        <option value="Gibraltar" />
+                        <option value="Greece" />
+                        <option value="Greenland" />
+                        <option value="Grenada" />
+                        <option value="Guadeloupe" />
+                        <option value="Guam" />
+                        <option value="Guatemala" />
+                        <option value="Guinea" />
+                        <option value="Guinea-bissau" />
+                        <option value="Guyana" />
+                        <option value="Haiti" />
+                        <option value="Heard Island and Mcdonald Islands" />
+                        <option value="Holy See (Vatican City State)" />
+                        <option value="Honduras" />
+                        <option value="Hong Kong" />
+                        <option value="Hungary" />
+                        <option value="Iceland" />
+                        <option value="India" />
+                        <option value="Indonesia" />
+                        <option value="Iran, Islamic Republic of" />
+                        <option value="Iraq" />
+                        <option value="Ireland" />
+                        <option value="Israel" />
+                        <option value="Italy" />
+                        <option value="Jamaica" />
+                        <option value="Japan" />
+                        <option value="Jordan" />
+                        <option value="Kazakhstan" />
+                        <option value="Kenya" />
+                        <option value="Kiribati" />
+                        <option value="Korea, Democratic People's Republic of" />
+                        <option value="Korea, Republic of" />
+                        <option value="Kuwait" />
+                        <option value="Kyrgyzstan" />
+                        <option value="Lao People's Democratic Republic" />
+                        <option value="Latvia" />
+                        <option value="Lebanon" />
+                        <option value="Lesotho" />
+                        <option value="Liberia" />
+                        <option value="Libyan Arab Jamahiriya" />
+                        <option value="Liechtenstein" />
+                        <option value="Lithuania" />
+                        <option value="Luxembourg" />
+                        <option value="Macao" />
+                        <option value="Macedonia, The Former Yugoslav Republic of" />
+                        <option value="Madagascar" />
+                        <option value="Malawi" />
+                        <option value="Malaysia" />
+                        <option value="Maldives" />
+                        <option value="Mali" />
+                        <option value="Malta" />
+                        <option value="Marshall Islands" />
+                        <option value="Martinique" />
+                        <option value="Mauritania" />
+                        <option value="Mauritius" />
+                        <option value="Mayotte" />
+                        <option value="Mexico" />
+                        <option value="Micronesia, Federated States of" />
+                        <option value="Moldova, Republic of" />
+                        <option value="Monaco" />
+                        <option value="Mongolia" />
+                        <option value="Montserrat" />
+                        <option value="Morocco" />
+                        <option value="Mozambique" />
+                        <option value="Myanmar" />
+                        <option value="Namibia" />
+                        <option value="Nauru" />
+                        <option value="Nepal" />
+                        <option value="Netherlands" />
+                        <option value="Netherlands Antilles" />
+                        <option value="New Caledonia" />
+                        <option value="New Zealand" />
+                        <option value="Nicaragua" />
+                        <option value="Niger" />
+                        <option value="Nigeria" />
+                        <option value="Niue" />
+                        <option value="Norfolk Island" />
+                        <option value="Northern Mariana Islands" />
+                        <option value="Norway" />
+                        <option value="Oman" />
+                        <option value="Pakistan" />
+                        <option value="Palau" />
+                        <option value="Palestinian Territory, Occupied" />
+                        <option value="Panama" />
+                        <option value="Papua New Guinea" />
+                        <option value="Paraguay" />
+                        <option value="Peru" />
+                        <option value="Philippines" />
+                        <option value="Pitcairn" />
+                        <option value="Poland" />
+                        <option value="Portugal" />
+                        <option value="Puerto Rico" />
+                        <option value="Qatar" />
+                        <option value="Reunion" />
+                        <option value="Romania" />
+                        <option value="Russian Federation" />
+                        <option value="Rwanda" />
+                        <option value="Saint Helena" />
+                        <option value="Saint Kitts and Nevis" />
+                        <option value="Saint Lucia" />
+                        <option value="Saint Pierre and Miquelon" />
+                        <option value="Saint Vincent and The Grenadines" />
+                        <option value="Samoa" />
+                        <option value="San Marino" />
+                        <option value="Sao Tome and Principe" />
+                        <option value="Saudi Arabia" />
+                        <option value="Senegal" />
+                        <option value="Serbia and Montenegro" />
+                        <option value="Seychelles" />
+                        <option value="Sierra Leone" />
+                        <option value="Singapore" />
+                        <option value="Slovakia" />
+                        <option value="Slovenia" />
+                        <option value="Solomon Islands" />
+                        <option value="Somalia" />
+                        <option value="South Africa" />
+                        <option value="South Georgia and The South Sandwich Islands" />
+                        <option value="Spain" />
+                        <option value="Sri Lanka" />
+                        <option value="Sudan" />
+                        <option value="Suriname" />
+                        <option value="Svalbard and Jan Mayen" />
+                        <option value="Swaziland" />
+                        <option value="Sweden" />
+                        <option value="Switzerland" />
+                        <option value="Syrian Arab Republic" />
+                        <option value="Taiwan, Province of China" />
+                        <option value="Tajikistan" />
+                        <option value="Tanzania, United Republic of" />
+                        <option value="Thailand" />
+                        <option value="Timor-leste" />
+                        <option value="Togo" />
+                        <option value="Tokelau" />
+                        <option value="Tonga" />
+                        <option value="Trinidad and Tobago" />
+                        <option value="Tunisia" />
+                        <option value="Turkey" />
+                        <option value="Turkmenistan" />
+                        <option value="Turks and Caicos Islands" />
+                        <option value="Tuvalu" />
+                        <option value="Uganda" />
+                        <option value="Ukraine" />
+                        <option value="United Arab Emirates" />
+                        <option value="United Kingdom" />
+                        <option value="United States Minor Outlying Islands" />
+                        <option value="United States of America" />
+                        <option value="Uruguay" />
+                        <option value="Uzbekistan" />
+                        <option value="Vanuatu" />
+                        <option value="Venezuela" />
+                        <option value="Viet Nam" />
+                        <option value="Virgin Islands, British" />
+                        <option value="Virgin Islands, U.S" />
+                        <option value="Wallis and Futuna" />
+                        <option value="Western Sahara" />
+                        <option value="Yemen" />
+                        <option value="Zambia" />
+                        <option value="Zimbabwe" />
+                    </datalist>
+                    <span class="text-danger">Provider Country is required</span>
+                </div>
+                <div id="country-note" class="form-group note-display">
+                    <div class="row">
+                        <div>
+                            <i class="fa fa-exclamation-triangle fa-2x exclamation-icon"></i>
+                        </div>
+                        <div class="col claim-note">
+                            <p>
+                                Please note, if your claim was incurred in the United States, you will not view it here on the Global Resources portal.  Please visit myuhc.com to view your U.S. claims.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="providerCity">${properties.providerCity}</label>
+                    <input type="text" class="form-control" id="providerCity" aria-required="false" aria-labelledby="Provider City" />
+                    <span class="text-danger">Provider City is required</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="claimNickname">${properties.claimNickname}
+                    </label>
+                    <input type="text" class="form-control" id="claimNickname" aria-required="false" aria-labelledby="Claim Nickname" maxlength="150"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="billedAmount">${proeprties.billedAmount}</label>
+                    <input type="text" class="form-control" id="billedAmount" aria-required="false" aria-labelledby="Billed Amount" />
+                    <span class="text-danger">Billed Amount is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="claimCurrency">${properties.claimCurrency}</label>
+                    <input type="text" class="form-control" list="currency" name="currency" id="claimCurrency">
+                    <datalist id="currency">
+                        <option value="Philippine Peso" />
+                        <option value="US Dollar" />
+                        <option value="Euro" />
+                    </datalist>
+                    <span class="text-danger">Claim Currency is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfService">${properties.dateofService}</label>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" id="dateOfService" aria-required="false" aria-labelledby="Date of Service" placeholder="DD-MM-YYYY"
+                        />
+                        <span class="input-group-addon date-of-service-icon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                    <span class="text-danger">Date of Service is required</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group diagForm">
+                    <label for="diagnosis">${properties.diagnosis}</label>
+                    <p id="diagDetails" class="mb-0">Please provide the member's diagnosis (for example: strep throat, broken leg) or, if available, the ICD10 diagnosis code from your invoice.
+                    </p>
+                    <p id="charDiagnosisLimit">150</p>
+                    <textarea class="form-control" id="diagnosisText" rows="3" maxlength="150" onload="diagnosisTextCtr(this.value)" onkeyup="diagnosisTextCtr(this.value)"></textarea>
+                    <span class="text-danger">Diagnosis is required</span>
+                </div>
+                <div class="form-group treatForm">
+                    <label for="treatment">${properties.descriptionofTreatment}</label>
+                    <p id="treatDetails" class="mb-0">Please provide a brief description of the treatment or services received (for example: office
+                        visit plus blood work).</p>
+                    <p id="charTreatmentLimit">250</p>
+                    <textarea class="form-control" id="treatText" rows="3" maxlength="250" onload="treatmentTextTextCtr(this.value)" onkeyup="treatmentTextTextCtr(this.value)"></textarea>
+                    <span class="text-danger">Description of Treatment is required</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="lineBtn">
+    <div class="col text-center submit-claim">
+        <button class="btn btn-danger cancel-btn">
+            <span class="button-text">CANCEL</span>
+        </button>
+        <button class="btn btn-secondary submit-claim-btn">
+            <span class="button-text">UPLOAD FILES</span>
+        </button>
+    </div>
+</div>
+
+<!-- end of second component -->
+			</main>
+
+		</div>

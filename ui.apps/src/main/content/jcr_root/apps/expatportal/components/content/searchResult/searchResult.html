@@ -1,0 +1,383 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.js @ categories='expatportal.providerDetailSearch'}"/>
+
+
+    <div id="hidden-listItem-template" style="display: none">
+              
+              
+              <p class="refine-title pb-1" id="search-refine-title"></p>
+<div id="mapcontainer"  style="display:none">
+<div class="row search-result-map">
+            <div class="col-lg-12">               
+                <div style="width: 100%; height: 400px; position:relative;" class="map">
+                 <span id="zoomOut" class="lightZoom zoomOut">-</span>
+                 <span id="zoomIn" class="lightZoom zoomIn">+</span>
+                 <button type="button" class="btn btn-primary btn-sm" id="redoBtn"  style="visibility:hidden">REDO SEARCH IN THIS AREA</button>
+            </div>
+            </div>
+</div>
+</div>
+<div id="mapinfo"  style="display:none">           
+    <div class="row">
+      <div class="col-lg-12">
+                <div class="info-map">
+                    <span class="text">
+                        <i class="fa fa-info-circle"></i> This map is provided for your reference. We suggest contacting your provider to confirm their
+                        exact location.
+                    </span>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+        <div class="row my-3">
+            <!--Start of Card -->
+            <div class="col-lg-12">
+                <div class="provider-results-cards-container">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1 col-sm-2 col-12 provider-card-icon" id="container-rounded">
+                            <div class="icon-container-rounded numbered">
+                                <p></p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-10 col-12 card-details" id = "card-name">
+                         <div class="row">
+                         <div class="col-lg-8 col-md-8 provider-card-name" id = "provider-card-name" >
+                       <h4>
+                          <a href="#"></a>
+                       </h4>
+
+         </div>
+                  <div class="col-lg-4 col-md-4 provider-card-distance" id = "distance">
+                   <p></p>
+             </div>
+      </div>
+        <div class="row">
+               <div class="col-lg-12 provider-card-speciality" id="card-speciality">
+                <p></p>
+          </div>
+            <div class="col-lg-12 provider-card-type" id="card-provider-type">
+                <p></p>
+           </div>
+    </div>
+
+                <div class="row mb-2">
+                                <div class="col-lg-8 col-md-8 provider-card-address" id="card-address">
+                                    <div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 provider-card-other-detail">                                   
+                                    <ul>
+                                        <li id="languageSection" style="display:none">
+                                            <i class="fa fa-check-circle"  ></i> Speaks English</li>
+                                        <li id="directPaySection" style="display:none">
+                                            <span title="Direct Pay Available indicates that UnitedHealthcare Global has an agreement with this provider to bill UnitedHealthcare Global directly for your health benefits. If you experience difficulty with this, please ask the provider to contact us using the phone number on the back of your member ID card." onclick="openDirectPayNote()" class="direct-pay-note">
+                                                <i class="fa fa-info-circle" ></i> Direct Pay Available
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 provider-card-contact" id="card-contact">
+                                    <a></a>
+                                   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 provider-card-site" id ="card-site">
+                                    <a href="#"></a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 provider-card-btn">
+                                <button class="btn btn-primary request-direct-pay-btn gop-important-notice-dialog-open"
+                                onclick="openRequestDirectBtn(event)" style="display:none">
+                                    ARRANGE PAYMENT TO PROVIDER
+                                </button>
+                            </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of card -->
+
+       
+
+      
+        <div class="col-lg-12 controls-pagination-row">
+            <div class="controls-pagination text-right">
+                <span class="description" id="totalPages"></span>
+                <button href="#" class="btn btn-outline-primary page-prev" id="prev" aria-disabled="true">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button href="#" class="btn btn-outline-primary page-next" id="next" aria-disabled="true">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+     <div class="row">
+       <div class="row">
+        <div id="limit-provider-result">
+            <div id="limit-provider-result-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-8 mt-4 text-left">
+                            <h3 class="mb-0">Search Results Over the Limit</h3>
+                        </div>
+                        <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                            <button class="btn modal-close" onclick="closeLimitProvider()"></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col text-left">
+                            <p class="m-0">Your search returned more than 100 results. Only 100 results are displayed. Use the filters to narrow
+                                your search results.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col text-center close-filter-button">
+                            <button type="button" class="btn btn-primary px-3" onclick="closeLimitProvider()">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<input type="hidden" id="defaultZoom" value=""/>
+
+
+
+
+   <script>
+
+function openDirectPayNote() {
+  document.getElementById("direct-pay-note").style.display = "block";
+   }
+
+  function closeDirectPayNote() {
+  document.getElementById("direct-pay-note").style.display = "none";
+                             }
+
+                             function cancelClaim() {
+                                           document.getElementById("cancel-claim").style.display = "block";
+                             }
+
+                             function closeClaim() {
+                                           document.getElementById("cancel-claim").style.display = "none";
+                             }
+
+                             function cancelClaimNotif() {
+                                           window.location.href='http://localhost:3002/standard-pages/landing.html';
+                             }
+
+                             function autoComplete() {
+                                           var searchValue = document.getElementById("provider-search-value");
+                                           if (searchValue.value.length > 0) {
+                                                          document.getElementById("autocomplete-container").style.display = "none";
+                                                          document.getElementById("search-criteria-container").style.display = "none";
+                                                          document.getElementById("search-criteria-error-msg").style.display = "none";
+                                                          
+                                           } else {
+                                                          document.getElementById("autocomplete-container").style.display = "none";
+                                                          document.getElementById("search-criteria-container").style.display = "none";
+                                                          document.getElementById("search-criteria-error-msg").style.display = "none";
+                                           }
+                             }
+
+                             // window.onload = init; 
+
+</script>
+
+
+     <script type="text/javascript">
+
+              
+                             var map = null, infobox, dataLayer;
+                             var x = document.getElementById("redoBtn").style.visibility = 'hidden';
+                             // document.getElementById('btnX').style.visibility = 'hiddetestdsfasdfan';
+                             function initMap(displayList) {
+            var mapElement = document.getElementById("myMap");
+            var zoomInButton = $(mapElement).find('#zoomIn');
+            var zoomOutButton = $(mapElement).find('#zoomOut');
+            var redoButton = $(mapElement).find('#redoBtn');
+            var mapBounds = map != null ? map.getBounds() : null;
+            var mapZoomVal = map != null ? map.getZoom() : 10;
+            var latitude = $('#location1').attr('data-location')  ? $('#location1').attr('data-location').split(',')[0] : 0;
+            var longitude = $('#location1').attr('data-location')  ? $('#location1').attr('data-location').split(',')[1] : 0;
+
+                                           map = new Microsoft.Maps.Map(mapElement, {
+                                                          credentials: "AinNNqGYDHVpY_UScg6JLFaVSKMFSZSzFq-GoRRk2jzQTSYHMo8EvxAhZi3Iv93R",
+                                                          showZoomButtons: false,
+                                                          showLocateMeButton: false,
+                                                          center: new Microsoft.Maps.Location(latitude, longitude)
+                                           });
+                                           $("#defaultZoom").val(map.getZoom());
+            $(mapElement).find('#zoomOut').on('click',function(){
+                                                          var z = map.getZoom() - 1;
+                                                          map.setView({ zoom: z });
+                                                          $(redoButton).css('visibility','visible');
+
+            });
+
+             $(mapElement).find('#zoomIn').on('click',function(){
+                                                          var z = map.getZoom() + 1;
+                                                          map.setView({ zoom: z });
+                                                          $(redoButton).css('visibility','visible');
+
+            });
+                                           
+                                           $(redoButton).on('click',function(){
+                                                          // var z = parseInt($("#defaultZoom").val());
+															var mapView = new function(){
+																this.sw = map.getBounds().getSoutheast();
+																this.nw = map.getBounds().getNorthwest();
+															};
+                                                         /* map.setView({ center: new Microsoft.Maps.Location(latitude, longitude),
+                                                          zoom: 10 }); */
+                                                          var data = {};
+                                                          data.query = "";
+                                                        data.city = "";
+                                              			data.country = "";
+                                              			data.location = [];
+                                              			let geoLocNW = {"geoLoc":
+                                              				mapView.nw.latitude + ", "
+                                              				+ mapView.nw.longitude};
+                                              			let geoLocSW = {"geoLoc":
+                                              				mapView.sw.latitude + ", "
+                                              				+ mapView.sw.longitude};
+                                              			searchJsApi.redoLatitude = mapView.nw.latitude;
+                                              			searchJsApi.redoLongitude = mapView.nw.longitude;
+                                              			data.location.push(geoLocNW);
+                                              			data.location.push(geoLocSW);
+                                              			data.distance = 50;
+                                              			$("select.form-control.location-distance").val(data.distance);
+                                                           $(".refine-checkbox-container input[type='checkbox']")
+                                              							.prop('checked', false);
+                                              			$('#location-empty-error').hide();
+                                              			 var bounds = map.getBounds();
+                                              			searchJsApi.redoSearch(data,map.getZoom());
+                                                         
+                                                          $(redoButton).css('visibility','hidden');
+
+            });
+                                           Microsoft.Maps.Events.addHandler(map, 'viewchange', function (e) {
+                                                         $(redoButton).css('visibility','visible');
+                                           });
+                                           updateZoomButtons();
+
+                                           dataLayer = new Microsoft.Maps.EntityCollection();
+                                           map.entities.push(dataLayer);
+                                           //map.setView({ zoom: mapZoomVal });
+                                           setTimeout(function(){map.setView({ zoom: mapZoomVal })},1000);
+                                           map.setView({ bounds: mapBounds });
+                                           var infoboxLayer = new Microsoft.Maps.EntityCollection();
+                                           map.entities.push(infoboxLayer);
+                                           // infobox = new Microsoft.Maps.Infobox();
+                                           infobox = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(latitude, longitude), { visible: false });
+                                           infoboxLayer.push(infobox);
+                                           AddData(displayList);
+                                           $("#displayList").val(displayList);
+                             }
+
+                             function AddData(displayList) {
+                                           var strPinNum = "";
+            var counter = 0;
+                                           for(var i=0; i< displayList.length; i++)
+            {
+                counter++;
+                                                          var counterText = "" + displayList[i].counter;
+                                                          var providerSectionID = "#provider-" + displayList[i].providerId;
+                                              var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(displayList[i].address[0].location.Latitude,displayList[i].address[0].location.Longitude), {
+                                                          icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
+                                                          color: '#007bff',
+                                                          text: counterText,
+                                                          anchor: new Microsoft.Maps.Point(12, 39),
+                                                          textOffset: new Microsoft.Maps.Point(0, 5)
+                                           });
+            var name = "<h5 style='width: auto; color:black;'>" + displayList[i].name + "</h5>" ;
+                                           var address = "<p>" + displayList[i].address[0].full  + ", "
+                                                + displayList[i].address[0].city[0].name + ", " 
+                                                + displayList[i].address[0].country[0].name + " " 
+                                                + displayList[i].address[0].postalcode+
+                                                "</p>";
+            var directPayText = displayList[i].allowsDirectPay == true ? "<p style='color:#003DA1;'>Direct Pay Available</p>" : "";
+
+                                           pin.Description = "<div class=\"provider-anchor\" href=\"" + providerSectionID + "\">"  + name + address + directPayText + "</div>";
+                                           pin.providerSectionID = providerSectionID;
+
+                                           if(window.innerWidth < 500){
+                                               Microsoft.Maps.Events.addHandler(pin, 'click', function (e) { displayInfobox(e); });
+            								   Microsoft.Maps.Events.addHandler(pin, 'dblclick', function (e) { closeInfoBox(e); });
+               								}
+                                           // Microsoft.Maps.Events.addHandler(pin1, 'click', displayInfobox);
+                                           Microsoft.Maps.Events.addHandler(pin, 'mouseover', displayInfobox);
+                                           Microsoft.Maps.Events.addHandler(pin, 'mouseout', closeInfoBox);                                
+                                           dataLayer.push(pin);
+            }
+                             }
+
+                             function updateZoomButtons() {
+            var mapElement = document.getElementById("myMap");
+            var zoomInButton = $(mapElement).find('#zoomIn');
+            var zoomOutButton = $(mapElement).find('#zoomOut');
+            var redoButton = $(mapElement).find('#redoBtn');
+
+                                           switch (map.getMapTypeId()) {
+                                                          case Microsoft.Maps.MapTypeId.birdseye:
+                                                          case Microsoft.Maps.MapTypeId.aerial:
+                                                          case Microsoft.Maps.MapTypeId.canvasDark:
+                                                                        zoomOutButton.className = 'darkZoom';
+                                                                        zoomInButton.className = 'darkZoom';
+                                                                        redoButton.className = 'darkZoom';
+                                                                        break;
+                                                          default:
+                                                                        zoomOutButton.className = 'lightZoom';
+                                                                        zoomInButton.className = 'lightZoom';
+                                                                        redoButton.className = 'lightZoom';
+                                                                        break;
+                                           }
+                             }
+
+                             function closeInfoBox() {
+                                           //Close the infobox           
+                                           infobox.setOptions({
+                                                          visible: false
+                                           });
+                             }
+
+                             function displayInfobox(e) {
+                                           var infoboxTemplate = '<div class="customInfobox" style="background: white;border: 1px solid #cecece;align:center;font-family:Arial; font-size:x-small; padding:5px;">{description}</div>';
+                                           //Make sure the infobox has metadata to display.
+                                           if (e.targetType == 'pushpin') {
+                                                          //Set the infobox options with the metadata of the pushpin.
+                                                          infobox.setOptions({
+                                                                        location: e.target.getLocation(),
+                                                                        // title: e.target.metadata.title,
+                                                                        description: e.target.Description,
+                                                                        title : e.target.providerSectionID,
+                                                                        htmlContent: infoboxTemplate.replace('{description}', e.target.Description),
+                                                                        visible: true
+                                                          });
+                                                          Microsoft.Maps.Events.addHandler(infobox, 'click', function () {
+                                                                        var sectionID = infobox.getOptions().title;
+                                                                        $('html,body').animate({scrollTop: $(sectionID).offset().top},'slow');
+                                                                        //$(infobox.getOptions().title).ScrollTo();
+                                               });
+                                           }
+                             }
+              
+
+                             
+                             
+              </script>
+

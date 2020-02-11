@@ -1,0 +1,11 @@
+use-verbose-error-messages=false
+cookie-path=/
+cipher-suite=1
+obfuscate-password=true
+token-notbefore-tolerance=60
+token-renewuntil=43200
+use-sunjce=false
+password=lVOs2WQQmiwJitaDN08Omg==
+token-name=opentoken
+token-lifetime=300
+use-cookie=false

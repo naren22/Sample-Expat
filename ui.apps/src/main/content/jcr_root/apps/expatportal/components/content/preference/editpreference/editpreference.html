@@ -1,0 +1,241 @@
+<div id="editpreferencediv" class="editpreference" style="padding:10px; display: none;" >
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="review-submit-sub-title mb-3">Edit Reimbursement Preference</h3>
+    </div>
+</div>
+<div class="row no-pref-container">
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12 mb-4">
+        <div class="row mb-1">
+            <div class="col-lg-12">
+                <h5 class="mb-0 review-submit-col-title">Reimbursement Method</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mt-0 mb-2 graphic-selector">
+                <div class="col-lg-5 mr-2 mb-1 selector eft-selector-edit">
+                    <span id="eftTxt-edit"><i class="fa fa-bank"></i> EFT</span>
+                </div>
+            
+                <div class="col-lg-5 selector check-selector-edit">
+                    <span id="checkTxt-edit"><div class="check-icon-ctn">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="money-check-alt" class="svg-inline--fa fa-money-check-alt fa-w-20" 
+                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="currentColor" d="M608 32H32C14.33 32 0 46.33 0 64v384c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zM176 327.88V344c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V152c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.05 44.44-42.67 45.07zM416 312c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16zm160 0c0 4.42-3.58 8-8 8h-80c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16zm0-96c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h272c4.42 0 8 3.58 8 8v16z"></path>
+                </svg>
+            </div> CHECK</span>
+                </div>
+            
+            </div>        </div>
+        <div class="row">
+            <div class="col">
+                <p id="method-check-req-msg-edit" class="text-danger mb-1">Please select Reimbursement Method.</p>
+            </div>
+        </div>
+        <div id="eft-method-edit">
+            <div class="row mb-2">
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6 payee-info">
+                    <span title="Payee Name as it appears on your bank account." class="payee-note-btn">
+                        <i class="fa fa-info-circle" ></i> Payee Name*
+                    </span>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="eftPayeeName-edit" placeholder="Enter Payee Name" aria-required="false" aria-labelledby="Payee Name" value="Vikkte Heid"
+                        maxlength="35" />
+                    <p id="payee-name-eft-req-msg-edit" class="text-danger mb-0">Payee Name is required.</p>
+                    <p id="payee-name-eft-char-msg-edit" class="text-danger mb-0">Payee Name allows only alphanumeric characters and . - & '</p>
+            
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mb-0">Country*</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" list="eftCountryList" name="eftCountryList" id="eftCountry-edit" placeholder="Choose a Country" aria-required="false"
+                        aria-labelledby="Country" autocomplete="off" value="Philippines" maxlength="100">
+                    <datalist id="eftCountryList">
+
+                    </datalist>
+                    <p id="country-eft-req-msg-edit" class="text-danger mb-0">Country is required.</p>
+                    <p id="country-eft-valid-msg-edit" class="text-danger mb-0">Please enter a valid country name.</p>
+                    <p id="country-eft-char-msg-edit" class="text-danger mb-0">Country allows only alphabetic characters and . - & ' ( ) , Å ô é</p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mb-0">Currency*</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" list="eftCurrencyList" name="eftCurrencyList" id="eftCurrency-edit" placeholder="Choose a Currency" aria-required="false"
+                        aria-labelledby="Currency" autocomplete="off" value="Philippine Peso" maxlength="100">
+                    <datalist id="eftCurrencyList">
+
+                    </datalist>
+                    <p id="currency-eft-req-msg-edit" class="text-danger mb-0">Currency is required.</p>
+                    <p id="currency-eft-valid-msg-edit" class="text-danger mb-0">Please enter a valid currency.</p>
+                    <p id="currency-eft-char-msg-edit" class="text-danger mb-0">Currency allows only alphabetic characters and . - & '</p>
+                </div>
+            </div>
+            <div class="row mb-2" id="bnkNme-edit" hidden>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mt-2">Bank Name*</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="bankName-edit" placeholder="Enter Bank Name" aria-required="false" aria-labelledby="Bank Name" maxlength="50"/>
+                    <p id="bankname-eft-req-msg-edit" class="text-danger mb-0">Bank Name is required.</p>
+                    <p id="bankname-eft-char-msg-edit" class="text-danger mb-0 hidden-banking-dynamic-field">Bank Name allows only alphabetic characters and . - & '</p>
+                </div>
+            </div>
+            <div id="dynamic-reference">
+                <div class="row mb-2 hidden-banking-dynamic-container">
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                        <p class="mt-2"></p>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                        <input type="text" class="form-control" id="" placeholder="Enter Details" aria-required="false" aria-labelledby="" />
+                        <p id="" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                        <p id="" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="dynamic-fields-edit">
+            </div>
+            <div class="row mb-2" id="bnkAdd1-edit" hidden>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mt-2">Bank Address 1</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="bankAddress1-edit" placeholder="Enter Address" aria-required="false" aria-labelledby="Bank Address 1" maxlength="100" />
+                    <p id="bankaddress1-eft-char-msg-edit" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                </div>
+            </div>
+            <div class="row mb-2" id="bnkAdd2-edit" hidden>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mt-2">Bank Address 2</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="bankAddress2-edit" placeholder="Enter Address" aria-required="false" aria-labelledby="Bank Address 2" maxlength="100" />
+                    <p id="bankaddress2-eft-char-msg-edit" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                </div>
+            </div>
+            <div class="row mb-2" id="bnkAdd3-edit" hidden>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mt-2">Bank Address 3</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="bankAddress3-edit" placeholder="Enter Address" aria-required="false" aria-labelledby="Bank Address 3" maxlength="100" />
+                    <p id="bankaddress3-eft-char-msg-edit" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                </div>
+            </div>
+            <div class="row mb-2" id="bnkAdd4-edit" hidden>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <p class="mt-2">Bank Address 4</p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="bankAddress4-edit" placeholder="Enter Address" aria-required="false" aria-labelledby="Bank Address 4" maxlength="100" />
+                    <p id="bankaddress4-eft-char-msg-edit" class="text-danger mb-0 hidden-banking-dynamic-field"></p>
+                </div>
+            </div>        </div>
+        <!--end of eft-method -->
+        <div id="check-method-edit">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-4 mt-2">
+                    <div class="arrow-up-check"></div>
+                    <div class="check-method-no-pref-text-box">
+                        <p>
+                            <span class="font-weight-bold mr-3">Reimbursement Method</span>
+                            <span>Check</span>
+                        </p>
+                        <p>You will be reimbursed via check to your mailing address. Typically, payment issued by electronic
+                            funds transfer is received faster.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-6 payee-info">
+                    <span title="Payee Name as it appears on your bank account." class="payee-note-btn">
+                        <i class="fa fa-info-circle" ></i> Payee Name*
+                    </span>
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" id="checkPayeeName-edit" placeholder="Enter Payee Name" aria-required="false" aria-labelledby="Payee Name" value="" maxlength="35"
+                    />
+                    <p id="payee-name-check-req-msg-edit" class="text-danger mb-0">Payee Name is required.</p>
+                    <p id="payee-name-check-char-msg-edit" class="text-danger mb-0">Payee Name allows only alphanumeric characters and . - & '</p>
+            
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-6">
+                    <p class="mb-0">Country*</p>
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" list="checkCountryList" name="checkCountryList" id="checkCountry-edit" placeholder="Enter Country" aria-required="false" aria-labelledby="Country"
+                        autocomplete="off" value="Philippines" maxlength="100">
+                    <datalist id="checkCountryList">
+
+                    </datalist>
+                    <p id="country-check-req-msg-edit" class="text-danger mb-0">Country is required.</p>
+                    <p id="country-check-valid-msg-edit" class="text-danger mb-0">Please enter a valid country name.</p>
+                    <p id="country-check-char-msg-edit" class="text-danger mb-0">Country allows only alphabetic characters and . - & ' ( ) ,  Å ô é</p>
+                </div>
+            </div> 
+            <div class="row mb-2">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-6">
+                    <p class="mb-0">Currency*</p>
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-6 col-6">
+                    <input type="text" class="form-control" list="checkCurrencyList" name="checkCurrencyList" id="checkCurrency-edit" placeholder="Enter Currency" aria-required="false" aria-labelledby="Currency"
+                        autocomplete="off" value="Philippine Peso" maxlength="100">
+                    <datalist id="checkCurrencyList">
+
+                    </datalist>
+                    <p id="currency-check-req-msg-edit" class="text-danger mb-0">Currency is required.</p>
+                    <p id="currency-check-valid-msg-edit" class="text-danger mb-0">Please enter a valid currency.</p>
+                    <p id="currency-check-char-msg-edit" class="text-danger mb-0">Currency allows only alphabetic characters and . - & '</p>
+                </div>
+            </div>        </div>
+        <div class="row">
+            <div class="col-lg-12 mt-4 text-center">
+                <button id="save-pref-btn" class="btn btn-primary submit-claim-btn mb-2"  >
+                    <span class="button-text">SAVE PREFERENCE</span>
+                </button>
+            </div>
+            <div class="col-lg-12 mt-2 text-center">
+                <button id="cancel-pref-btn" class="btn btn-danger cancel-btn mb-2" >
+                    <span class="button-text">CANCEL</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="row">
+        <div id="payee-note">
+            <div id="payee-note-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-6 text-left">
+                            <h3 class="mt-4">
+                                Payee Name
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 col-6 text-right">
+                            <button class="modal-close" id="closePayeeNote"></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="mb-5">Payee Name as it appears on your bank account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.css @ categories='expatportal.preference.edit'}" data-sly-unwrap/>

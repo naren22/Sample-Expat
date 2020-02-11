@@ -1,0 +1,145 @@
+<div class="container k-content">
+<main>
+<div class="row">
+    <div id="gop-important-notice" class="gop-important-notice-dialog" role="dialog"
+        aria-labelledby="gop-important-notice-label" aria-modal="true">
+        <div id="gop-important-notice-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-8 mt-4 text-left">
+                        <h3 class="mb-0" id="gop-important-notice-label">Important Notice</h3>
+    
+                    </div>
+                    <div class="col-lg-4 col-4 mt-2 text-right close-mark">
+                        <button class="btn modal-close gop-important-notice-dialog-close" onclick="closeRequestDirectBtn()"
+                            aria-label="close"></button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 help-contact-us-info">
+                        <p>For an inpatient hospital stay or planned surgery, please contact us for assistance. These
+                            requests cannot be fulfilled online.</p>
+    
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                        <div class="icon-container mb-2">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-12 help-contact-us-info help-contact-us-info-gop">
+                        <a id=gopcontact class="mt-0" href="tel:+17632747362">
+                            <span class="help-contact-us-info-text">Outside the U.S. or Canada: &nbsp;</span>
+                            <span class="help-contact-us-info-number">
+                                +1.763.274.7362 <span class="sr-only">,</span>
+                                <span>
+                        </a>
+
+                        <a id=gopcontacts class="mt-0" href="tel:+18778440280">
+                            <span class="help-contact-us-info-text">In the U.S. or Canada: toll-free at &nbsp;</span>
+                            <span class="help-contact-us-info-number" >
+                                +1.877.844.0280 <span class="sr-only">,</span>
+                                <span>
+                        </a>
+                        <!-- <p>Outside the U.S. or Canada: <a href="tel:+17632747362">1.763.274.7362</a></p>
+                        <p>In the U.S. or Canada: toll-free at <a href="tel:+18778440280">1.877.844.0280</a></p> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                        <div class="icon-container mb-2">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-12 help-contact-us-mail">
+                        <a class="help-contact-us-mail-gop"
+                            href="mailto:Expatinsurance_MemberServices@uhcglobal.com">Expatinsurance_MemberServices@uhcglobal.com</a>
+                    </div>
+                </div>
+    
+                <div class="row my-3">
+                    <div class="col text-center cancel-claim-button">
+                        <button type="button" class="btn btn-primary px-3 gop-important-notice-dialog-close" onclick="closeRequestDirectBtn()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+<div class="row">
+    </div>
+<div id="new-search-container" class="row mt-3 mb-2 hide">
+    <a href="#" id="new-search-link" aria-label="New Search Button">
+     <button class="new-search-icon" onclick="newSearch()"></button>
+
+        <span class="new-search-label mr-4 pr-4">NEW SEARCH</span>
+    </a>
+</div>
+<hr id="new-search-line" class="mt-5 hide" />
+
+<div id="new-search-mv" class="row hide">
+    <div class="text-right mr-4">
+        <button class="new-search" onclick="newSearch()"></button>
+    </div>
+</div>
+<div data-sly-resource="${ @path='par', resourceType='foundation/components/parsys'}"></div>
+
+<div class="row">
+    <div class="row">
+        <div id="direct-pay-note" style="display: none;">
+            <div id="direct-pay-note-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-6 text-left">
+                            <h3 class="">
+                                Direct Pay Available
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 col-6 text-right">
+                            <button class="modal-close" onclick="closeDirectPayNote()"></button>
+                            <!-- <h3 class="mb-0">
+                                <i onclick="closeDirectPayNote()" class="fa fa-times location-close"></i>
+                            </h3> -->
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="mb-5">Direct Pay Available indicates that UnitedHealthcare Global has an agreement with this provider to
+                                bill UnitedHealthcare Global directly for your health benefits. If you experience difficulty
+                                with this, please ask the provider to contact us using the phone number on the back of your member
+                                ID card.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+<div class ="row mt-5 px-3">
+<div class="col-lg-3 col-md-5" data-sly-resource="${ @path='left-par', resourceType='foundation/components/parsys'}"></div>
+<div class="col-lg-9 col-md-7" data-sly-resource="${ @path='right-par', resourceType='foundation/components/parsys'}"></div>
+</div>
+
+</main></div>
+
+<script>
+    $(document).ready(function() {
+		var memberData= sessionStorage.getItem('memberData');
+  		var memberJSON = memberData ? JSON.parse(memberData) : {};
+        var groupId = memberJSON  ? memberJSON.ClientIdentifier : "";
+        if (groupId && groupId == "0911754") {
+            $("#gopcontact").html(' <span class="help-contact-us-info-text">Outside the U.S. or Canada: &nbsp;</span> <span class="help-contact-us-info-number"> +1.763.274.7367 <span class="sr-only">,</span> <span> </span></span>');
+			$("#gopcontacts").html('').html('<span class="help-contact-us-info-text">In the U.S. or Canada: toll-free at &nbsp;</span> <span class="help-contact-us-info-number"> +1.877.294.2042 <span class="sr-only">,</span> <span> </span></span>');
+        } else if (groupId && (groupId == "0914234" || groupId == "0914235")) {
+			$("#gopcontact").html('<span class="help-contact-us-info-text">Outside the U.S. or Canada: &nbsp;</span> <span class="help-contact-us-info-number"> +1.763.274.7362 <span class="sr-only">,</span> <span> </span></span>');
+			$("#gopcontacts").html('').html('<span class="help-contact-us-info-text">In the U.S. or Canada: toll-free at &nbsp;</span> <span class="help-contact-us-info-number"> +1.844.231.9074 <span class="sr-only">,</span> <span> </span></span>');
+
+        }
+
+    });
+
+
+</script>

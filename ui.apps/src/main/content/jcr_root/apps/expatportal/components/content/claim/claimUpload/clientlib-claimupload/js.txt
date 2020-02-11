@@ -1,0 +1,8 @@
+#base=js
+uploadfile.js
+
+submit.js
+
+handleProgress.js
+submitClaimAPI.js
+submitted.js
