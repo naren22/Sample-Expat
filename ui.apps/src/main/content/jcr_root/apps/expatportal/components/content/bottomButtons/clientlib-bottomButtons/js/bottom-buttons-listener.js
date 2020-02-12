@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	
+	//this is my change
 
     removeOtherMemberData();
     //Redirection Logic Start - QuickLinks
